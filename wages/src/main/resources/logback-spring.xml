@@ -7,7 +7,6 @@
             <pattern>
                 %d - %msg%n
             </pattern>
-            <charset>UFT-8</charset>
         </layout>
     </appender>
 
