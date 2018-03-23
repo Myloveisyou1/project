@@ -1,24 +1,20 @@
 package com.jiemin.wages.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Aspect
 @Component
+@Slf4j
 public class HttpAspect {
-
-    private final static Logger log = LoggerFactory.getLogger(HttpAspect.class);
 
     @Pointcut("execution(public * com.jiemin.wages.controller.*.*(..))")
     public void log(){
