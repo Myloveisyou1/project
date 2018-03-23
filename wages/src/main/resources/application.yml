@@ -1,21 +1,6 @@
 server:
   port: 8088
 
-#配置mysql数据源
-mysql:
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/farm?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: 123456
-#打印sql语句
-#logging:
-#  level:
-#    com:
-#      jiemin:
-#        wages:
-#          mapper: DEBUG
-#thymelea模板配置
 spring:
   thymeleaf:
     prefix: classpath:/templates/
@@ -31,3 +16,16 @@ spring:
         content:
           enabled: true
           paths: /**
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wages?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
