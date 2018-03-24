@@ -1,5 +1,7 @@
 package com.jiemin.wages.domain;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -11,10 +13,11 @@ public interface StaffRepository extends JpaRepository<Staff, Long>{
 
     /**
      * 根据员工名称查找
-     * @param staffName
+     * @param userName
      * @return
      */
 
-    //Staff findByStaffName(String staffName);
+    Page<Staff> findByUserNameStartingWith(String userName, Pageable pageable);
+
 
 }

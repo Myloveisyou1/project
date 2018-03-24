@@ -7,6 +7,7 @@ package com.jiemin.wages.enums;
  */
 public enum ResultEnum {
     UNKNOW_ERROR(-1,"系统繁忙,请稍后再试!"),
+    ILLEGAL_OPERATION(9999,"非法操作"),
     BREAKFIRST(1,"早餐"),
     LUNCH(2,"午餐"),
     DINNER(3,"晚餐"),

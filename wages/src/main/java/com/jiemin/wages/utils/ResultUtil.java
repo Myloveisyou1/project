@@ -1,6 +1,7 @@
 package com.jiemin.wages.utils;
 
-import com.jiemin.wages.domain.Result;
+import com.jiemin.wages.domain.common.Pages;
+import com.jiemin.wages.domain.common.Result;
 import com.jiemin.wages.enums.ResultEnum;
 
 /**
@@ -10,16 +11,19 @@ import com.jiemin.wages.enums.ResultEnum;
  */
 public class ResultUtil {
 
-    public static Result success(Object object){
+    public static Result success(Object object, Pages pages){
         Result result = new Result();
         result.setCode(ResultEnum.SUCCESS.getCode());
         result.setMsg(ResultEnum.SUCCESS.getMsg());
+
         result.setData(object);
+        result.setPage(pages);
+
         return result;
     }
 
     public static Result success(){
-        return success(null);
+        return success(null,null);
     }
 
     public static Result error(Integer code, String msg){
@@ -27,6 +31,7 @@ public class ResultUtil {
         result.setCode(code);
         result.setMsg(msg);
         result.setData(null);
+        result.setPage(null);
         return result;
     }
 }

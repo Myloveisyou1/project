@@ -1,6 +1,6 @@
 package com.jiemin.wages.handle;
 
-import com.jiemin.wages.domain.Result;
+import com.jiemin.wages.domain.common.Result;
 import com.jiemin.wages.enums.ResultEnum;
 import com.jiemin.wages.exception.FarmException;
 import com.jiemin.wages.utils.ResultUtil;
