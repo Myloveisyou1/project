@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: create in 2018/3/23 0023 11:41
  */
 @RestController
+@RequestMapping(value = "/staff")
 public class StaffController {
 
     @Autowired

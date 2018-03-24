@@ -16,6 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Descript: 员工信息维护类
@@ -23,6 +24,7 @@ import org.springframework.stereotype.Service;
  * @Date: create in 2018/3/24 0024 14:19
  */
 @Service
+@Transactional
 public class StaffService {
 
     @Autowired
@@ -34,7 +36,7 @@ public class StaffService {
     public Result addStaff(Staff staff) {
 
         if(CommonUtil.isNotEmpty(staff)) {
-            staffRepository.save(staff);
+            staffMapper.insertStaff(staff);
             return ResultUtil.success(staff,null);
         } else {
             return ResultUtil.error(ResultEnum.ERROR.getCode(),ResultEnum.ERROR.getMsg());
@@ -73,10 +75,10 @@ public class StaffService {
     public Result delByGid(long gid) {
 
         try{
-            Staff staff = staffRepository.getOne(gid);
+            Staff staff = staffMapper.getOne(gid);
             System.out.println(staff.getGid()+"----------------------");
             if(CommonUtil.isNotEmpty(staff) && CommonUtil.isNotEmpty(staff.getGid())) {
-                staffRepository.delete(staff);
+                staffMapper.delByGid(staff.getGid());
                 return ResultUtil.success();
             } else {
                 return ResultUtil.error(404,"删除失败,员工不存在");
