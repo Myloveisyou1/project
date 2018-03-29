@@ -18,4 +18,6 @@ public class Result<T> {
     private T data;
     /***分页信息*/
     private Pages page;
+
+    private Long totalCount;
 }

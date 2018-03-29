@@ -10,13 +10,19 @@ import lombok.Data;
 @Data
 public class PageUtils {
 
-    public static Pages detail(int pageNumber, int pageSize,boolean first, boolean last, int totalPages, long totalCount) {
+    public static Pages detail(int pageNumber, int pageSize,int totalCount) {
 
         Pages page = new Pages();
+        boolean first = false, last = false;
+        int totalPages = 0;
         page.setPageNumber(pageNumber);
         page.setPageSize(pageSize);
+        if(pageNumber == 1) {
+            first = true;
+        }
         page.setFirst(first);
         page.setLast(last);
+        totalPages = (totalCount%pageSize) > 0 ? (totalCount/pageSize+1) : (totalCount/pageSize);
         page.setTotalPage(totalPages);
         page.setTotalCount(totalCount);
         return page;

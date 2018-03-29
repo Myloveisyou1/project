@@ -102,7 +102,7 @@ public class SalaryTypeService {
         } else {
             salaryType = salaryTypeRepository.findByTypeNameStartingWith(typeName,pageable);
         }
-        Pages pages = PageUtils.detail(pageNumber,pageSize,salaryType.isFirst(),salaryType.isLast(),salaryType.getTotalPages(),salaryType.getTotalElements());
+        Pages pages = PageUtils.detail(pageNumber,pageSize,1);
 
         return ResultUtil.success(salaryType.getContent(),pages);
 

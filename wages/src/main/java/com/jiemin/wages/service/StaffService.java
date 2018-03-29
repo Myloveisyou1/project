@@ -1,7 +1,6 @@
 package com.jiemin.wages.service;
 
 import com.jiemin.wages.domain.Staff;
-import com.jiemin.wages.domain.StaffRepository;
 import com.jiemin.wages.domain.common.Pages;
 import com.jiemin.wages.domain.common.Result;
 import com.jiemin.wages.enums.ResultEnum;
@@ -11,12 +10,10 @@ import com.jiemin.wages.utils.CommonUtil;
 import com.jiemin.wages.utils.PageUtils;
 import com.jiemin.wages.utils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @Descript: 员工信息维护类
@@ -27,8 +24,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class StaffService {
 
-    @Autowired
-    private StaffRepository staffRepository;
     @Autowired
     private StaffMapper staffMapper;
 
@@ -52,7 +47,7 @@ public class StaffService {
      */
     public Result findStaffByPage(Integer pageNumber, Integer pageSize, String userName) {
 
-        Page<Staff> staff;
+        /*Page<Staff> staff;
         Sort sort = new Sort(Sort.Direction.DESC, "gid");
         Pageable pageable = new PageRequest((pageNumber-1),pageSize,sort);
 
@@ -60,10 +55,12 @@ public class StaffService {
             staff = staffRepository.findAll(pageable);
         } else {
             staff = staffRepository.findByUserNameStartingWith(userName,pageable);
-        }
-        Pages pages = PageUtils.detail(pageNumber,pageSize,staff.isFirst(),staff.isLast(),staff.getTotalPages(),staff.getTotalElements());
+        }*/
+        List<Staff> staffList = staffMapper.queryPagingStaff(userName,pageNumber,pageSize);
+        int count = staffMapper.queryCountStaff(userName);
+        Pages pages = PageUtils.detail(pageNumber,pageSize,count);
 
-        return ResultUtil.success(staff.getContent(),pages);
+        return ResultUtil.success(staffList,pages);
 
     }
 

@@ -1,11 +1,14 @@
 package com.jiemin.wages.mapper;
 
 import com.jiemin.wages.domain.Staff;
+import com.jiemin.wages.provider.BaseProvider;
 import com.jiemin.wages.utils.SimpleInsertLangDriver;
 import com.jiemin.wages.utils.SimpleUpdateLangDriver;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * @Descript:
@@ -29,4 +32,11 @@ public interface StaffMapper {
 
     @Select("select * from staff where gid=${gid}")
     Staff getOne(@Param("gid") long gid);
+
+    @SelectProvider(type = BaseProvider.class,method = "findStaffPaging")
+    List<Staff> queryPagingStaff(@Param("userName") String userName, @Param("pageNumber") Integer pageNumber, @Param("pageSize") Integer pageSize);
+
+    @SelectProvider(type = BaseProvider.class,method = "findStaffCount")
+    int queryCountStaff(@Param("userName") String userName);
+
 }

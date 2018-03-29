@@ -45,6 +45,12 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
 
+        log.info(">>>MyInterceptor1>>>>>>>请求处理之后进行调用，但是在视图被渲染之前（Controller方法调用之后）");
+        if(httpServletResponse.getStatus()==500){
+            modelAndView.setViewName("/errorpage/500");
+        }else if(httpServletResponse.getStatus()==404){
+            modelAndView.setViewName("/errorpage/404");
+        }
     }
 
     @Override

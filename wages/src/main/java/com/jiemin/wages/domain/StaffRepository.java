@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
  * @Author: liuyingjie
  * @Date: create in 2018/3/23 0023 16:42
  */
-@Component
-public interface StaffRepository extends JpaRepository<Staff, Long>{
+//@Component
+public interface StaffRepository{
 
     /**
      * 根据员工名称查找
