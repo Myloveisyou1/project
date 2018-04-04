@@ -12,6 +12,6 @@ public class WagesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WagesApplication.class, args);
-		System.out.println("========启动成功1==========");
+		System.out.println("========启动成功111==========");
 	}
 }
