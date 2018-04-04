@@ -1,5 +1,9 @@
 server:
   port: 8088
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
 
 spring:
   thymeleaf:
@@ -16,19 +20,21 @@ spring:
         content:
           enabled: true
           paths: /**
-  jpa:
-    properties:
-      hibernate:
-        hbm2ddl:
-          auto: update
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    show-sql: true
+#  jpa:
+#    properties:
+#      hibernate:
+#        hbm2ddl:
+#          auto: update
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql: true
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/wages?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: wagesystem
 
 #开启驼峰命名转换
 

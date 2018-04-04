@@ -6,6 +6,7 @@ import com.jiemin.wages.exception.FarmException;
 import com.jiemin.wages.utils.CommonUtil;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -26,6 +27,9 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         log.info("===========进入拦截器==============");
+//        HandlerMethod method = (HandlerMethod)o;
+//        method.getMethod();
+//        method.getMethodParameters();
         String sessionId = httpServletRequest.getParameter("sessionId");
         //不拦截登陆相关操作
         if(httpServletRequest.getRequestURL().indexOf("login") != -1 && httpServletRequest.getRequestURL().indexOf("loginOut") == -1){

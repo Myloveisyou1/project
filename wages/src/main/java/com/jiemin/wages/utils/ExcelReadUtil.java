@@ -116,7 +116,9 @@ public class ExcelReadUtil {
     public static void main(String[] args)
             throws FileNotFoundException, FileFormatException
     {
-        List<String[]> vos = readExcel("C:\\Users\\Administrator\\Desktop\\test.xlsx");
-        System.out.println(vos);
+       /* List<String[]> vos = readExcel("C:\\Users\\Administrator\\Desktop\\test.xlsx");
+        System.out.println(vos);*/
+       String[] str = {"dhasj","fdas"};
+        System.out.println(str[0]+" "+str[1]);
     }
 }

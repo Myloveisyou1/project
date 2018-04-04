@@ -1,8 +1,6 @@
 package com.jiemin.wages.service;
 
 import com.jiemin.wages.domain.SalaryType;
-import com.jiemin.wages.domain.SalaryTypeRepository;
-import com.jiemin.wages.domain.Staff;
 import com.jiemin.wages.domain.common.Pages;
 import com.jiemin.wages.domain.common.Result;
 import com.jiemin.wages.enums.ResultEnum;
@@ -25,9 +23,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SalaryTypeService {
-
-    @Autowired
-    private SalaryTypeRepository salaryTypeRepository;
 
     @Autowired
     private SalaryTypeMapper salaryTypeMapper;
@@ -93,7 +88,7 @@ public class SalaryTypeService {
      */
     public Result findSalaryTypeByPage(Integer pageNumber, Integer pageSize, String typeName) {
 
-        Page<SalaryType> salaryType;
+        /*Page<SalaryType> salaryType;
         Sort sort = new Sort(Sort.Direction.DESC, "gid");
         Pageable pageable = new PageRequest((pageNumber-1),pageSize,sort);
 
@@ -104,7 +99,7 @@ public class SalaryTypeService {
         }
         Pages pages = PageUtils.detail(pageNumber,pageSize,1);
 
-        return ResultUtil.success(salaryType.getContent(),pages);
-
+        return ResultUtil.success(salaryType.getContent(),pages);*/
+        return null;
     }
 }
