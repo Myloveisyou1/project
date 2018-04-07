@@ -6,105 +6,106 @@
     <link rel="stylesheet" href="css/layui.css"/>
 </head>
 <body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo">layui 后台布局</div>
-        <!-- 头部区域(可配合layui已有的水平导航) -->
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"/>
-                    贤心
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item"><a href="">退出</a></li>
-        </ul>
-    </div>
-
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域(可配合layui已有的垂直导航) -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">所有商品</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="javascript:;">列表三</a></dd>
-                        <dd><a href="">超链接</a></dd>
-                    </dl>
-                </li>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">layui 后台布局</div>
+            <!-- 头部区域(可配合layui已有的水平导航) -->
+            <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"/>
+                        贤心
+                    </a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">列表一</a></dd>
-                        <dd><a href="javascript:;">列表二</a></dd>
-                        <dd><a href="">超链接</a></dd>
+                        <dd><a href="">基本资料</a></dd>
+                        <dd><a href="">安全设置</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">发布商品</a></li>
+                <li class="layui-nav-item"><a href="">退出</a></li>
             </ul>
         </div>
-    </div>
 
-    <div class="layui-body">
-        <!--导航栏-->
-        <div style="background-color: #F0F0F0;height: 30px;">
-            <div style="padding-left: 5px;padding-top:5px;">
-                <span class="layui-breadcrumb" lay-separator="-">
-                  <a><cite>首页</cite></a>
-                  <a><cite>国际新闻</cite></a>
-                  <a><cite>亚太地区</cite></a>
-                  <a><cite>正文</cite></a>
-                </span>
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域(可配合layui已有的垂直导航) -->
+                <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">所有商品</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">列表一</a></dd>
+                            <dd><a href="javascript:;">列表二</a></dd>
+                            <dd><a href="javascript:;">列表三</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">解决方案</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">列表一</a></dd>
+                            <dd><a href="javascript:;">列表二</a></dd>
+                            <dd><a href="">超链接</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="">云市场</a></li>
+                    <li class="layui-nav-item"><a href="">发布商品</a></li>
+                </ul>
             </div>
         </div>
-        <!--主题内容-->
-        <div style="height: 800px;margin:5px 0 0 30px;">
-            <div style="border: 1px white solid">
-                <!--条件-->
-                <div class="layui-form-item">
-                    <div class="layui-input-inline">
-                        <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
-                    </div>
-                    <div class="layui-input-inline">
-                        <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
-                    </div>
-                    <div class="layui-input-inline">
-                        <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
-                    </div>
-                    <div class="layui-input-inline">
-                        <button class="layui-btn layui-btn-radius layui-btn-primary">
-                            <i class="layui-icon">&#xe615;</i> 查询
-                        </button>
-                    </div>
-                </div>
-                <!--按钮组-->
-                <div class="layui-form-item">
-                    <div class="layui-btn-group">
-                        <button class="layui-btn layui-btn-sm"><i class="layui-icon">&#xe654;</i>增加</button>
-                        <button class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon">&#xe642;</i>编辑</button>
-                        <button class="layui-btn layui-btn-danger layui-btn-sm"><i class="layui-icon">&#xe640;</i>删除</button>
-                    </div>
-                </div>
-                <!--数据-->
-               <table id="demo" lay-filter="test"></table>
-            </div>
 
+        <div class="layui-body">
+            <!--导航栏-->
+            <div style="background-color: #F0F0F0;height: 30px;">
+                <div style="padding-left: 5px;padding-top:5px;">
+                    <span class="layui-breadcrumb" lay-separator="-">
+                      <a><cite>首页</cite></a>
+                      <a><cite>国际新闻</cite></a>
+                      <a><cite>亚太地区</cite></a>
+                      <a><cite>正文</cite></a>
+                    </span>
+                </div>
+            </div>
+            <!--主题内容-->
+            <div style="height: 500px;margin:5px 0 0 30px;">
+                <div style="border: 1px white solid">
+                    <!--条件-->
+                    <div class="layui-form-item">
+                        <div class="layui-input-inline">
+                            <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
+                        </div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
+                        </div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="password" required="required" lay-verify="required" placeholder="请输入内容" autocomplete="off" class="layui-input"/>
+                        </div>
+                        <div class="layui-input-inline">
+                            <button class="layui-btn layui-btn-radius layui-btn-primary">
+                                <i class="layui-icon">&#xe615;</i> 查询
+                            </button>
+                        </div>
+                    </div>
+                    <!--按钮组-->
+                    <div class="layui-form-item">
+                        <div class="layui-btn-group">
+                            <button class="layui-btn layui-btn-sm" onclick="addStaff()"><i class="layui-icon">&#xe654;</i>增加</button>
+                            <button class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon">&#xe642;</i>编辑</button>
+                            <button class="layui-btn layui-btn-danger layui-btn-sm"><i class="layui-icon">&#xe640;</i>删除</button>
+                        </div>
+                    </div>
+                    <!--数据-->
+                   <table id="demo" lay-filter="test"></table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            © layui.com - 底部固定区域
         </div>
     </div>
-
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
-        © layui.com - 底部固定区域
-    </div>
-</div>
 <script type="text/javascript" src="layui.js"></script>
+<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){
@@ -113,12 +114,13 @@
     layui.use('table',function(){
         var table = layui.table;
         var str = [{field: 'gid', title: 'ID', width:80, sort: true, fixed: 'left'},
-                    {field: 'userName', title: '用户名', width:80},
-                    {field: 'userSex', title: '性别', width:80, sort: true},
-                    {field: 'userTel', title: '城市', width:80},
-                    {field: 'emergencyName', title: '签名', width: 177},
-                    {field: 'emergencyTel', title: '积分', width: 80, sort: true},
-                    {field: 'bankCard', title: '评分', width: 80, sort: true}];
+                    {field: 'userName', title: '用户名', width:128},
+                    {field: 'sex', title: '性别', width:64},
+                    {field: 'userTel', title: '联系方式', width:128},
+                    {field: 'emergencyName', title: '紧急联系人', width: 128},
+                    {field: 'emergencyTel', title: '紧急联系人电话', width: 128},
+                    {field: 'bankCard', title: '工资卡号', width: 256},
+                    {field:'createTime',title:'入职时间',width:200}];
         table.render({
             elem:"#demo",
             height:300,
@@ -137,6 +139,83 @@
             }
         });
     });
+
+    function addStaff() {
+
+        layer.open({
+            title: "新增员工",
+            type: 1,
+            content: $('#add')
+        });
+    }
+
+    function saveStaff() {
+
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8088/staff/saveStaff",
+            data:{
+                userName:$("input[name='userName']").val(),
+                userSex:$("input[name='userSex']").val(),
+                userTel:$("input[name='userTel']").val(),
+                emergencyName:$("input[name='emergencyName']").val(),
+                emergencyTel:$("input[name='emergencyTel']").val(),
+                bankCard:$("input[name='bankCard']").val()
+            },success:function (data) {
+                if(data.code == 200) {
+                    layer.msg(data.msg);
+                }
+            }
+        });
+    }
 </script>
 </body>
+<div style="display: none;" id="add">
+    <form class="layui-form" action="#" style="height: 400px;">
+
+        <div class="layui-form-item" style="margin-top: 10px;">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-inline">
+                <input type="text" name="userName" required="required"  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">联系电话</label>
+            <div class="layui-input-inline">
+                <input type="text" name="userTel" required="required" lay-verify="required" placeholder="请输入联系电话" autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-inline">
+                <input type="radio" name="userSex" value="0" title="男"/>
+                <input type="radio" name="userSex" value="1" title="女" checked="checked"/>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">紧急联系人</label>
+            <div class="layui-input-inline">
+                <input type="text" name="emergencyName" required="required" lay-verify="required" placeholder="请输入联系联系人" autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">紧急电话</label>
+            <div class="layui-input-inline">
+                <input type="text" name="emergencyTel" required="required" lay-verify="required" placeholder="请输入紧急联系人电话" autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">工资卡号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="bankCard" required="required" lay-verify="required" placeholder="请输入员工工资卡号" autocomplete="off" class="layui-input"/>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" onclick="saveStaff()">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+</div>
 </html>

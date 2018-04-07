@@ -18,7 +18,10 @@ public class ResultUtil {
 
         result.setData(object);
         result.setPage(pages);
-        result.setTotalCount(pages.getTotalCount());
+        if(CommonUtil.isNotEmpty(pages)) {
+
+            result.setTotalCount(pages.getTotalCount());
+        }
 
         return result;
     }

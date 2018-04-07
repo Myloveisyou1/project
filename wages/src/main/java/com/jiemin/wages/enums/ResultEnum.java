@@ -22,7 +22,9 @@ public enum ResultEnum {
     EMPTY_SESSIONID(104,"sessionId不能为空"),
     EMPTY_ERROR(404,"参数不全"),
     SUCCESS(200,"成功"),
-    ERROR(201,"失败");
+    ERROR(201,"失败"),
+    MAN(0,"男"),
+    WOMEN(1,"女");
     private Integer code;
 
     private String msg;

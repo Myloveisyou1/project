@@ -23,7 +23,7 @@ public interface StaffMapper {
     @Lang(SimpleUpdateLangDriver.class)
     int updateStaff(Staff staff);
 
-    @Insert("insert into staff (#{staff})")
+    @Insert("insert into staff(user_name,user_tel,user_sex,emergency_name,emergency_tel,bank_card,create_time) values(#{userName},#{userTel},#{userSex},#{emergencyName},#{emergencyTel},#{bankCard},#{createTime})")
     @Lang(SimpleInsertLangDriver.class)
     int insertStaff(Staff staff);
 

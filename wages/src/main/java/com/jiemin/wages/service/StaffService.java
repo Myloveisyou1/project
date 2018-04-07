@@ -7,12 +7,15 @@ import com.jiemin.wages.enums.ResultEnum;
 import com.jiemin.wages.exception.FarmException;
 import com.jiemin.wages.mapper.StaffMapper;
 import com.jiemin.wages.utils.CommonUtil;
+import com.jiemin.wages.utils.DatesUtils;
 import com.jiemin.wages.utils.PageUtils;
 import com.jiemin.wages.utils.ResultUtil;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,6 +34,7 @@ public class StaffService {
     public Result addStaff(Staff staff) {
 
         if(CommonUtil.isNotEmpty(staff)) {
+            staff.setCreateTime(new DatesUtils().time());
             staffMapper.insertStaff(staff);
             return ResultUtil.success(staff,null);
         } else {
@@ -57,6 +61,14 @@ public class StaffService {
             staff = staffRepository.findByUserNameStartingWith(userName,pageable);
         }*/
         List<Staff> staffList = staffMapper.queryPagingStaff(userName,pageNumber,pageSize);
+        if(CommonUtil.isNotEmpty(staffList)) {
+            for(int i=0;i<staffList.size();i++) {
+                Staff staff = staffList.get(i);
+                if (CommonUtil.isNotEmpty(staff.getUserSex())) {
+                    staff.setSex(staff.getUserSex()==ResultEnum.MAN.getCode()?ResultEnum.MAN.getMsg():ResultEnum.WOMEN.getMsg());
+                }
+            }
+        }
         int count = staffMapper.queryCountStaff(userName);
         Pages pages = PageUtils.detail(pageNumber,pageSize,count);
 
