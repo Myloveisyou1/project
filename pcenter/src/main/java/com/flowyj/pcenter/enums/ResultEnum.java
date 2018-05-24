@@ -14,7 +14,11 @@ public enum ResultEnum {
     TYPE_MIS_MATCH(203,"参数类型不匹配"),
     DATA_MIS_MATCH(204,"数据格式不对"),
     EMAIL_FROM(205,"1193418905@qq.com"),
-    KILL_FAIL(206,"秒杀失败");
+    KILL_FAIL(206,"秒杀失败"),
+    ERROR_PASSWORD(207,"密码错误"),
+    UNKNOW_ACCOUNT(208,"账户不存在"),
+    NOT_LOGIN(209,"账户未登录或登陆已失效"),
+    EMPTY_SESSIONID(210,"sessionId不能为空");
     private Integer code;
 
     private String msg;
