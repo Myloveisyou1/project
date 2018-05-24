@@ -1,0 +1,26 @@
+2018-05-24 08:54:44,033 - Starting PcenterApplication on SKY-20171023NXB with PID 5788 (C:\Users\Administrator\Desktop\pcenter\target\classes started by Administrator in C:\Users\Administrator\Desktop\pcenter)
+2018-05-24 08:54:44,037 - No active profile set, falling back to default profiles: default
+2018-05-24 08:54:44,105 - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@395b56bb: startup date [Thu May 24 08:54:44 CST 2018]; root of context hierarchy
+2018-05-24 08:54:45,007 - No MyBatis mapper was found in '[com.flowyj.pcenter.mapper]' package. Please check your configuration.
+2018-05-24 08:54:45,008 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-24 08:54:45,836 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration': Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$$EnhancerBySpringCGLIB$$e0b5f785]: Constructor threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration': Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties': Could not bind properties to 'ResourceProperties' : prefix=spring.resources, ignoreInvalidFields=false, ignoreUnknownFields=false; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'spring.resources' to org.springframework.boot.autoconfigure.web.ResourceProperties
+2018-05-24 08:54:45,856 - Error calling ApplicationEventListener
+java.lang.IllegalStateException: Restarter has not been initialized
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.boot.devtools.restart.Restarter.getInstance(Restarter.java:543)
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:50)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:158)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.failed(EventPublishingRunListener.java:126)
+	at org.springframework.boot.SpringApplicationRunListeners.callFailedListener(SpringApplicationRunListeners.java:91)
+	at org.springframework.boot.SpringApplicationRunListeners.failed(SpringApplicationRunListeners.java:84)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:812)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.flowyj.pcenter.PcenterApplication.main(PcenterApplication.java:10)
+2018-05-24 08:54:45,860 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.

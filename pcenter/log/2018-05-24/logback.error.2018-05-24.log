@@ -1,0 +1,19 @@
+2018-05-24 08:54:45,868 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target [Bindable@84487f4 type = org.springframework.boot.autoconfigure.web.ResourceProperties, value = 'provided', annotations = array<Annotation>[@org.springframework.boot.context.properties.ConfigurationProperties(prefix=spring.resources, value=spring.resources, ignoreUnknownFields=false, ignoreInvalidFields=false)]] failed:
+
+    Property: spring.resources.cache-period
+    Value: 0
+    Origin: "spring.resources.cache-period" from property source "refresh"
+    Reason: The elements [spring.resources.cache-period] were left unbound.
+
+Action:
+
+Update your application's configuration
+
