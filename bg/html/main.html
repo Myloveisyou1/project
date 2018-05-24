@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="../static/assets/common-css.js"></script>
+    <script src="../static/assets/common-js.js"></script>
+</head>
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default">
+        <!--顶部-->
+        <div class="navbar-container" id="top"><!--navbar-container-->
+
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+
+        <!-- 左边的菜单 -->
+        <div id="left" class="sidebar responsive"><!--sidebar-->
+
+        </div>
+
+        <!-- 正文部分-->
+        <div class="main-content">
+            <!-- 导航栏相关开始-->
+            <div class="breadcrumbs" id="breadcrumbs">
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="index.html">UI库首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">空白页</a>
+                    </li>
+                </ul>
+
+                <!-- #section:basics/content.searchbox   搜索部分开始=================== -->
+                <!--<div class="nav-search" id="nav-search">
+                    <form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="请输入关键字 ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="ace-icon fa fa-search nav-search-icon"></i>
+							</span>
+                    </form>
+                </div>-->
+                <!-- /section:basics/content.searchbox   搜索部分结束===================-->
+            </div>
+            <!-- #section:basics/content.breadcrumbs   导航栏相关结束-->
+        </div>
+
+        <!--底部-->
+        <div class="footer" id="footer">
+
+        </div>
+    </div>
+
+
+
+    <!--js-->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $('#footer').load('common/footer.html');
+            $('#left').load('common/left.html');
+            $('#top').load('common/top.html');
+
+        });
+
+    </script>
+</body>
+</html>
