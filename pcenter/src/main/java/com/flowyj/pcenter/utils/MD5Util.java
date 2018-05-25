@@ -83,7 +83,7 @@ public class MD5Util {
 
     public static void main(String[] args) {
 
-        String str =getMD5("123");
+        String str =getMD5("adminE10ADC3949BA59ABBE56E057F20F883E");
         System.out.println(genRandomNum(8));
 //		String str2 =getMD5("changeme");
 		System.out.println(str);

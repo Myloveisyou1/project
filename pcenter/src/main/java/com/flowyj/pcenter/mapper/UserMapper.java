@@ -1,9 +1,8 @@
 package com.flowyj.pcenter.mapper;
 
 import com.flowyj.pcenter.domain.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.flowyj.pcenter.utils.SimpleUpdateLangDriver;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,7 +19,7 @@ public interface UserMapper {
      * @param userName
      * @return
      */
-    @Select("select * from user where user_name = #{userName}")
+    @Select("select gid,user_name userName,password,email,role_id roleId,role_name roleName,create_time createTime,update_time updateTime,login_time loginTime,status from user where user_name = #{userName}")
     User findByUserName(String userName);
 
     /**
@@ -29,6 +28,10 @@ public interface UserMapper {
      * @param password
      * @return
      */
-    @Select("select * from user where user_name = #{userName} AND password = #{password}")
+    @Select("select gid,user_name userName,password,email,role_id roleId,role_name roleName,create_time createTime,update_time updateTime,login_time loginTime,status from user where user_name = #{userName} AND password = #{password}")
     User findByUserNameAndPassword(@Param("userName") String userName, @Param("password") String password);
+
+    @Update("update user (#{user}) where gid = #{gid}")
+    @Lang(SimpleUpdateLangDriver.class)
+    void optUpdateUser(User user);
 }

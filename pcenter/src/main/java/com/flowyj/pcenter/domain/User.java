@@ -1,5 +1,6 @@
 package com.flowyj.pcenter.domain;
 
+import com.flowyj.pcenter.domain.common.Base;
 import lombok.Data;
 
 /**
@@ -8,7 +9,7 @@ import lombok.Data;
  * @Date: create in 2018/5/24 0024 16:51
  */
 @Data
-public class User {
+public class User extends Base{
 
     private Long gid;
 
@@ -18,12 +19,10 @@ public class User {
 
     private String email;
 
-    private String createTime;
+    private Long roleId;
 
-    private String updateTime;
+    private String roleName;
 
     private String loginTime;
-
-    private Integer status;
 
 }

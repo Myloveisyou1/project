@@ -29,6 +29,6 @@ spring:
 mysql:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/personal?useUnicode=true&charactorEncoding=utf8
+    url: jdbc:mysql://localhost:3306/pcenter?useUnicode=true&charactorEncoding=utf8
     userName: root
     password: 123456
