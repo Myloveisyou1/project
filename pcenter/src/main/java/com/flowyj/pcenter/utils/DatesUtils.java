@@ -161,6 +161,16 @@ public class DatesUtils {
 
 		return sdf2.format(new Date(time));
 	}
+
+	/**
+	 * 格式化指定日期为指定格式
+	 * @param time
+	 * @return
+	 */
+	public static Date formatDate(String time,String type) throws ParseException {
+
+		return new SimpleDateFormat(type).parse(time);
+	}
     
     public static void main(String[] args) throws ParseException {
 		
