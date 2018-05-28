@@ -49,14 +49,14 @@ public class LoginService {
         if(mapper.findByUserName(userName) != null){
             if(user != null){
                 //先判断原来登陆是否失效
-                if(stringRedisTemplate.hasKey("sessionId")){
-                    if(stringRedisTemplate.hasKey(stringRedisTemplate.opsForValue().get("sessionId"))){
-                        stringRedisTemplate.delete(stringRedisTemplate.opsForValue().get("sessionId"));
-                    }
+                if(stringRedisTemplate.hasKey("sessionId"+userName)){
+                    sessionId = stringRedisTemplate.opsForValue().get("sessionId"+userName);
+                } else {
+
+                    //保存session到redis
+                    sessionId = MD5Util.getMD5(new Date().toString());
                 }
-                //保存session到redis
-                sessionId = MD5Util.getMD5(new Date().toString());
-                stringRedisTemplate.opsForValue().set("sessionId",sessionId);
+                stringRedisTemplate.opsForValue().set("sessionId"+userName,sessionId);
                 stringRedisTemplate.opsForValue().set(sessionId, JSONObject.toJSONString(user),1800, TimeUnit.SECONDS);
                 map.put("sessionId",sessionId);
                 map.put("user",user);

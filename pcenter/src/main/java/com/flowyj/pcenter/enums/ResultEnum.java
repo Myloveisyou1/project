@@ -18,7 +18,8 @@ public enum ResultEnum {
     ERROR_PASSWORD(207,"密码错误"),
     UNKNOW_ACCOUNT(208,"账户不存在"),
     NOT_LOGIN(209,"账户未登录或登陆已失效"),
-    EMPTY_SESSIONID(210,"sessionId不能为空");
+    EMPTY_SESSIONID(210,"sessionId不能为空"),
+    PAGENUM_ERROR(211,"页码必须大于0");
     private Integer code;
 
     private String msg;
