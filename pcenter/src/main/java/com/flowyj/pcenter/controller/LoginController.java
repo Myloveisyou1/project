@@ -22,7 +22,7 @@ public class LoginController {
      * @param password
      * @return
      */
-    @GetMapping(value = "/login")
+    @PostMapping(value = "/login")
     public Result login(@RequestParam(value = "userName") String userName, @RequestParam(value = "password") String password){
 
         //校验登陆

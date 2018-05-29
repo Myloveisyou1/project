@@ -48,57 +48,62 @@ public class LoginService {
         String sessionId = "";
         if(mapper.findByUserName(userName) != null){
             if(user != null){
-                //先判断原来登陆是否失效
-                if(stringRedisTemplate.hasKey("sessionId"+userName)){
-                    sessionId = stringRedisTemplate.opsForValue().get("sessionId"+userName);
-                } else {
+                if (user.getStatus() == 0) {
+                    //先判断原来登陆是否失效
+                    if(stringRedisTemplate.hasKey("sessionId"+userName)){
+                        sessionId = stringRedisTemplate.opsForValue().get("sessionId"+userName);
+                    } else {
 
-                    //保存session到redis
-                    sessionId = MD5Util.getMD5(new Date().toString());
-                }
-                stringRedisTemplate.opsForValue().set("sessionId"+userName,sessionId);
-                stringRedisTemplate.opsForValue().set(sessionId, JSONObject.toJSONString(user),1800, TimeUnit.SECONDS);
-                map.put("sessionId",sessionId);
-                map.put("user",user);
-
-                //获取权限信息
-                Long roleId = user.getRoleId();
-                List<Menu> menuList = menuMapper.findMenuByRole(roleId);
-                //最终返回的权限
-                List<MenuList> backList = new ArrayList<>();
-                if (menuList != null && menuList.size() > 0) {
-                    for (int i=0;i<menuList.size();i++) {
-                        MenuList bean = new MenuList();
-                        Menu mi = menuList.get(i);
-                        if (mi.getParentCode() == 0) {
-                            List<MenuList> list = new ArrayList<>();
-                            for (int j=i+1;j<menuList.size();j++) {
-                                Menu mj = menuList.get(j);
-                                MenuList beanj = new MenuList();
-                                if (mi.getCode() == mj.getParentCode()) {
-                                    beanj.setGid(mj.getGid());
-                                    beanj.setMenuName(mj.getMenuName());
-                                    beanj.setIcon(mj.getIcon());
-                                    beanj.setUrl(mj.getUrl());
-                                    list.add(beanj);
-                                }
-                            }
-                            bean.setGid(mi.getGid());
-                            bean.setMenuName(mi.getMenuName());
-                            bean.setIcon(mi.getIcon());
-                            bean.setUrl(mi.getUrl());
-                            bean.setMenuList(list);
-                            backList.add(bean);
-                        }
-
+                        //保存session到redis
+                        sessionId = MD5Util.getMD5(new Date().toString());
                     }
-                }
-                map.put("menu",backList);
-                //修改登录时间
-                user.setLoginTime(DatesUtils.time());
-                mapper.optUpdateUser(user);
+                    stringRedisTemplate.opsForValue().set("sessionId"+userName,sessionId);
+                    stringRedisTemplate.opsForValue().set(sessionId, JSONObject.toJSONString(user),1800, TimeUnit.SECONDS);
+                    map.put("sessionId",sessionId);
+                    map.put("user",user);
 
-                return map;
+                    //获取权限信息
+                    Long roleId = user.getRoleId();
+                    List<Menu> menuList = menuMapper.findMenuByRole(roleId);
+                    //最终返回的权限
+                    List<MenuList> backList = new ArrayList<>();
+                    if (menuList != null && menuList.size() > 0) {
+                        for (int i=0;i<menuList.size();i++) {
+                            MenuList bean = new MenuList();
+                            Menu mi = menuList.get(i);
+                            if (mi.getParentCode() == 0) {
+                                List<MenuList> list = new ArrayList<>();
+                                for (int j=i+1;j<menuList.size();j++) {
+                                    Menu mj = menuList.get(j);
+                                    MenuList beanj = new MenuList();
+                                    if (mi.getCode() == mj.getParentCode()) {
+                                        beanj.setGid(mj.getGid());
+                                        beanj.setMenuName(mj.getMenuName());
+                                        beanj.setIcon(mj.getIcon());
+                                        beanj.setUrl(mj.getUrl());
+                                        list.add(beanj);
+                                    }
+                                }
+                                bean.setGid(mi.getGid());
+                                bean.setMenuName(mi.getMenuName());
+                                bean.setIcon(mi.getIcon());
+                                bean.setUrl(mi.getUrl());
+                                bean.setMenuList(list);
+                                backList.add(bean);
+                            }
+
+                        }
+                    }
+                    map.put("menu",backList);
+                    //修改登录时间
+                    user.setLoginTime(DatesUtils.time());
+                    mapper.optUpdateUser(user);
+
+                    return map;
+                } else {
+                    throw new PCenterException(ResultEnum.USER_DISABLED);
+                }
+
             }else{
                 throw new PCenterException(ResultEnum.ERROR_PASSWORD);
             }

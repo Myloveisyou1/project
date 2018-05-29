@@ -19,7 +19,8 @@ public enum ResultEnum {
     UNKNOW_ACCOUNT(208,"账户不存在"),
     NOT_LOGIN(209,"账户未登录或登陆已失效"),
     EMPTY_SESSIONID(210,"sessionId不能为空"),
-    PAGENUM_ERROR(211,"页码必须大于0");
+    PAGENUM_ERROR(211,"页码必须大于0"),
+    USER_DISABLED(212,"账户被禁用");
     private Integer code;
 
     private String msg;
