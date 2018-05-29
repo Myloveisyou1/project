@@ -1,0 +1,1007 @@
+2018-05-25 09:03:56,029 - Starting PcenterApplication on SKY-20171023NXB with PID 6968 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:03:56,032 - No active profile set, falling back to default profiles: default
+2018-05-25 09:03:56,222 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72ad8773: startup date [Fri May 25 09:03:56 CST 2018]; root of context hierarchy
+2018-05-25 09:03:56,587 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:04:03,930 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:04:05,895 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:04:07,262 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$13efba5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:07,873 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:07,880 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$bb417a73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:09,763 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:09,783 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:09,785 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$7a34bc6c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:09,880 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:09,880 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d94dd713] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:04:11,189 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:04:11,251 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:04:11,272 - Starting service [Tomcat]
+2018-05-25 09:04:11,273 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:04:11,469 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:04:11,469 - Root WebApplicationContext: initialization completed in 15247 ms
+2018-05-25 09:04:11,910 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:04:11,915 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:04:11,916 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:04:11,916 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:04:11,916 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:04:11,916 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:04:13,451 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@72ad8773: startup date [Fri May 25 09:03:56 CST 2018]; root of context hierarchy
+2018-05-25 09:04:13,775 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:04:13,776 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:04:13,780 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:04:13,780 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:04:13,815 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:04:13,815 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:04:13,850 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:04:13,953 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:04:14,677 - LiveReload server is running on port 35729
+2018-05-25 09:04:14,852 - Registering beans for JMX exposure on startup
+2018-05-25 09:04:14,868 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:04:14,874 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:04:14,923 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:04:14,936 - Using a shared selector for servlet write/read
+2018-05-25 09:04:14,992 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:04:14,997 - Started PcenterApplication in 20.39 seconds (JVM running for 24.629)
+2018-05-25 09:05:05,316 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 09:05:05,316 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 09:05:05,344 - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2018-05-25 09:05:05,408 - ===========进入拦截器==============
+2018-05-25 09:05:05,719 - ===========进入拦截器==============
+2018-05-25 09:05:05,752 - {dataSource-1} inited
+2018-05-25 09:05:05,877 - ===========进入拦截器==============
+2018-05-25 09:05:06,045 - ===========进入拦截器==============
+2018-05-25 09:05:06,228 - ===========进入拦截器==============
+2018-05-25 09:05:06,350 - ===========进入拦截器==============
+2018-05-25 09:05:17,786 - ===========进入拦截器==============
+2018-05-25 09:06:15,030 - Starting PcenterApplication on SKY-20171023NXB with PID 10632 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:06:15,032 - No active profile set, falling back to default profiles: default
+2018-05-25 09:06:15,098 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 09:06:15 CST 2018]; root of context hierarchy
+2018-05-25 09:06:15,245 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:06:15,940 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:06:16,046 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:06:16,393 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$367536be] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,459 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,465 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$ddc6f6d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,556 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,567 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,568 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$9cba38cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,581 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,581 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fbd35373] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:06:16,930 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:06:16,944 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:06:16,954 - Starting service [Tomcat]
+2018-05-25 09:06:16,954 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:06:17,054 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:06:17,054 - Root WebApplicationContext: initialization completed in 1957 ms
+2018-05-25 09:06:17,250 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:06:17,258 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:06:17,258 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:06:17,258 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:06:17,258 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:06:17,259 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:06:17,911 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 09:06:15 CST 2018]; root of context hierarchy
+2018-05-25 09:06:17,975 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:06:17,976 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:06:17,979 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:06:17,980 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:06:18,016 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:06:18,016 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:06:18,037 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:06:18,065 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:06:18,442 - LiveReload server is running on port 35729
+2018-05-25 09:06:18,605 - Registering beans for JMX exposure on startup
+2018-05-25 09:06:18,606 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:06:18,614 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:06:18,626 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:06:18,636 - Using a shared selector for servlet write/read
+2018-05-25 09:06:18,654 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:06:18,659 - Started PcenterApplication in 4.227 seconds (JVM running for 5.016)
+2018-05-25 09:06:47,149 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 09:06:47,149 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 09:06:47,175 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-05-25 09:06:47,192 - ===========进入拦截器==============
+2018-05-25 09:06:47,255 - {dataSource-1} inited
+2018-05-25 09:07:10,123 - ===========进入拦截器==============
+2018-05-25 09:09:11,986 - ===========进入拦截器==============
+2018-05-25 09:10:15,715 - ===========进入拦截器==============
+2018-05-25 09:14:59,716 - ===========进入拦截器==============
+2018-05-25 09:19:12,940 - ===========进入拦截器==============
+2018-05-25 09:20:31,796 - ===========进入拦截器==============
+2018-05-25 09:23:09,045 - ===========进入拦截器==============
+2018-05-25 09:24:35,164 - ===========进入拦截器==============
+2018-05-25 09:24:58,266 - ===========进入拦截器==============
+2018-05-25 09:25:26,685 - ===========进入拦截器==============
+2018-05-25 09:26:10,283 - ===========进入拦截器==============
+2018-05-25 09:27:14,516 - ===========进入拦截器==============
+2018-05-25 09:28:01,253 - ===========进入拦截器==============
+2018-05-25 09:28:38,725 - ===========进入拦截器==============
+2018-05-25 09:28:54,340 - ===========进入拦截器==============
+2018-05-25 09:29:16,795 - ===========进入拦截器==============
+2018-05-25 09:30:36,853 - ===========进入拦截器==============
+2018-05-25 09:30:49,878 - ===========进入拦截器==============
+2018-05-25 09:34:13,855 - Starting PcenterApplication on SKY-20171023NXB with PID 5404 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:34:13,860 - No active profile set, falling back to default profiles: default
+2018-05-25 09:34:13,915 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70789f8f: startup date [Fri May 25 09:34:13 CST 2018]; root of context hierarchy
+2018-05-25 09:34:14,084 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:34:15,035 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:34:15,152 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:34:15,475 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$a0965e68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,547 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,554 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$47e81e7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,646 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,656 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,657 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$6db6076] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,669 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:15,670 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65f47b1d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:34:16,017 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:34:16,030 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:34:16,042 - Starting service [Tomcat]
+2018-05-25 09:34:16,042 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:34:16,145 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:34:16,146 - Root WebApplicationContext: initialization completed in 2231 ms
+2018-05-25 09:34:16,343 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:34:16,347 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:34:16,348 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:34:16,348 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:34:16,348 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:34:16,348 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:34:16,968 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@70789f8f: startup date [Fri May 25 09:34:13 CST 2018]; root of context hierarchy
+2018-05-25 09:34:17,035 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:34:17,036 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:34:17,039 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:34:17,040 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:34:17,085 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:34:17,085 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:34:17,105 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:34:17,133 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:34:17,502 - LiveReload server is running on port 35729
+2018-05-25 09:34:17,660 - Registering beans for JMX exposure on startup
+2018-05-25 09:34:17,661 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:34:17,668 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:34:17,680 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:34:17,691 - Using a shared selector for servlet write/read
+2018-05-25 09:34:17,707 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:34:17,713 - Started PcenterApplication in 4.713 seconds (JVM running for 5.517)
+2018-05-25 09:35:01,536 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 09:35:01,536 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 09:35:01,564 - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2018-05-25 09:35:01,582 - ===========进入拦截器==============
+2018-05-25 09:35:01,649 - {dataSource-1} inited
+2018-05-25 09:35:01,952 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-05-25 09:35:02,067 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2018-05-25 09:35:44,373 - Starting PcenterApplication on SKY-20171023NXB with PID 11144 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:35:44,376 - No active profile set, falling back to default profiles: default
+2018-05-25 09:35:44,442 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ae412e4: startup date [Fri May 25 09:35:44 CST 2018]; root of context hierarchy
+2018-05-25 09:35:44,549 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:35:45,310 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:35:45,424 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:35:45,763 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$f3ef2e27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,836 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,842 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$9b40ee3c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,929 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,940 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,941 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$5a343035] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,954 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:45,955 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b94d4adc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:35:46,366 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:35:46,380 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:35:46,391 - Starting service [Tomcat]
+2018-05-25 09:35:46,391 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:35:46,489 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:35:46,489 - Root WebApplicationContext: initialization completed in 2047 ms
+2018-05-25 09:35:46,689 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:35:46,695 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:35:46,696 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:35:46,696 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:35:46,696 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:35:46,696 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:35:47,351 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ae412e4: startup date [Fri May 25 09:35:44 CST 2018]; root of context hierarchy
+2018-05-25 09:35:47,420 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:35:47,421 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:35:47,424 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:35:47,425 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:35:47,468 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:35:47,469 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:35:47,493 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:35:47,528 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:35:48,024 - LiveReload server is running on port 35729
+2018-05-25 09:35:48,188 - Registering beans for JMX exposure on startup
+2018-05-25 09:35:48,189 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:35:48,195 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:35:48,206 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:35:48,218 - Using a shared selector for servlet write/read
+2018-05-25 09:35:48,233 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:35:48,240 - Started PcenterApplication in 4.513 seconds (JVM running for 5.33)
+2018-05-25 09:35:54,055 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 09:35:54,056 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 09:35:54,086 - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+2018-05-25 09:35:54,103 - ===========进入拦截器==============
+2018-05-25 09:35:54,174 - {dataSource-1} inited
+2018-05-25 09:37:00,856 - ===========进入拦截器==============
+2018-05-25 09:37:31,586 - Starting PcenterApplication on SKY-20171023NXB with PID 1388 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:37:31,589 - No active profile set, falling back to default profiles: default
+2018-05-25 09:37:31,671 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79008e24: startup date [Fri May 25 09:37:31 CST 2018]; root of context hierarchy
+2018-05-25 09:37:31,803 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:37:32,550 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:37:32,662 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:37:33,018 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$defc09b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,099 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,106 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$864dc9c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,202 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,214 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,215 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$45410bc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,231 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,232 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a45a2667] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:37:33,597 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:37:33,610 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:37:33,621 - Starting service [Tomcat]
+2018-05-25 09:37:33,621 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:37:33,720 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:37:33,720 - Root WebApplicationContext: initialization completed in 2049 ms
+2018-05-25 09:37:33,915 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:37:33,921 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:37:33,922 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:37:33,922 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:37:33,922 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:37:33,922 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:37:34,570 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@79008e24: startup date [Fri May 25 09:37:31 CST 2018]; root of context hierarchy
+2018-05-25 09:37:34,637 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:37:34,638 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:37:34,641 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:37:34,641 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:37:34,678 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:37:34,679 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:37:34,699 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:37:34,727 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:37:35,121 - LiveReload server is running on port 35729
+2018-05-25 09:37:35,292 - Registering beans for JMX exposure on startup
+2018-05-25 09:37:35,293 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:37:35,298 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:37:35,311 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:37:35,324 - Using a shared selector for servlet write/read
+2018-05-25 09:37:35,340 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:37:35,344 - Started PcenterApplication in 4.326 seconds (JVM running for 5.524)
+2018-05-25 09:42:18,417 - Starting PcenterApplication on SKY-20171023NXB with PID 6852 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 09:42:18,419 - No active profile set, falling back to default profiles: default
+2018-05-25 09:42:18,474 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37ed416a: startup date [Fri May 25 09:42:18 CST 2018]; root of context hierarchy
+2018-05-25 09:42:18,723 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 09:42:19,478 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 09:42:19,603 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 09:42:19,933 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$e678ba15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,007 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,012 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$8dca7a2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,100 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,110 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,112 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$4cbdbc23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,124 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,124 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$abd6d6ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 09:42:20,483 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 09:42:20,496 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:42:20,508 - Starting service [Tomcat]
+2018-05-25 09:42:20,508 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 09:42:20,613 - Initializing Spring embedded WebApplicationContext
+2018-05-25 09:42:20,613 - Root WebApplicationContext: initialization completed in 2140 ms
+2018-05-25 09:42:20,803 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 09:42:20,809 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 09:42:20,810 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 09:42:20,810 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 09:42:20,810 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 09:42:20,810 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 09:42:21,446 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37ed416a: startup date [Fri May 25 09:42:18 CST 2018]; root of context hierarchy
+2018-05-25 09:42:21,511 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 09:42:21,512 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 09:42:21,515 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 09:42:21,516 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 09:42:21,554 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:42:21,554 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:42:21,575 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 09:42:21,610 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 09:42:21,989 - LiveReload server is running on port 35729
+2018-05-25 09:42:22,158 - Registering beans for JMX exposure on startup
+2018-05-25 09:42:22,160 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 09:42:22,166 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 09:42:22,177 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 09:42:22,190 - Using a shared selector for servlet write/read
+2018-05-25 09:42:22,217 - Tomcat started on port(s): 8081 (http)
+2018-05-25 09:42:22,231 - Started PcenterApplication in 4.362 seconds (JVM running for 5.132)
+2018-05-25 09:46:29,179 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 09:46:29,179 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 09:46:29,216 - FrameworkServlet 'dispatcherServlet': initialization completed in 37 ms
+2018-05-25 09:46:29,241 - ===========进入拦截器==============
+2018-05-25 09:46:29,315 - {dataSource-1} inited
+2018-05-25 09:48:19,258 - ===========进入拦截器==============
+2018-05-25 09:49:18,904 - ===========进入拦截器==============
+2018-05-25 09:52:12,777 - ===========进入拦截器==============
+2018-05-25 09:52:35,334 - ===========进入拦截器==============
+2018-05-25 09:55:02,320 - ===========进入拦截器==============
+2018-05-25 09:55:24,328 - ===========进入拦截器==============
+2018-05-25 10:02:59,425 - ===========进入拦截器==============
+2018-05-25 10:03:40,232 - ===========进入拦截器==============
+2018-05-25 10:56:46,252 - ===========进入拦截器==============
+2018-05-25 11:01:34,271 - ===========进入拦截器==============
+2018-05-25 11:01:36,719 - ===========进入拦截器==============
+2018-05-25 11:02:56,536 - ===========进入拦截器==============
+2018-05-25 11:04:36,478 - Starting PcenterApplication on SKY-20171023NXB with PID 10684 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 11:04:36,480 - No active profile set, falling back to default profiles: default
+2018-05-25 11:04:36,545 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@723543c3: startup date [Fri May 25 11:04:36 CST 2018]; root of context hierarchy
+2018-05-25 11:04:36,677 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 11:04:37,456 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 11:04:37,577 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 11:04:37,926 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$27afbb49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:37,997 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,003 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$cf017b5e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,092 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,103 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,104 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$8df4bd57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,118 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,119 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ed0dd7fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:04:38,500 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 11:04:38,514 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 11:04:38,526 - Starting service [Tomcat]
+2018-05-25 11:04:38,526 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 11:04:38,634 - Initializing Spring embedded WebApplicationContext
+2018-05-25 11:04:38,634 - Root WebApplicationContext: initialization completed in 2089 ms
+2018-05-25 11:04:38,832 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 11:04:38,838 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 11:04:38,839 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 11:04:38,839 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 11:04:38,839 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 11:04:38,839 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 11:04:39,487 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@723543c3: startup date [Fri May 25 11:04:36 CST 2018]; root of context hierarchy
+2018-05-25 11:04:39,554 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 11:04:39,555 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 11:04:39,559 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 11:04:39,559 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 11:04:39,598 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:04:39,598 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:04:39,623 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 11:04:39,658 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:04:40,056 - LiveReload server is running on port 35729
+2018-05-25 11:04:40,221 - Registering beans for JMX exposure on startup
+2018-05-25 11:04:40,222 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 11:04:40,229 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 11:04:40,241 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 11:04:40,253 - Using a shared selector for servlet write/read
+2018-05-25 11:04:40,271 - Tomcat started on port(s): 8081 (http)
+2018-05-25 11:04:40,279 - Started PcenterApplication in 4.458 seconds (JVM running for 5.275)
+2018-05-25 11:04:46,914 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 11:04:46,915 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 11:04:46,944 - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-05-25 11:04:46,961 - ===========进入拦截器==============
+2018-05-25 11:04:47,027 - {dataSource-1} inited
+2018-05-25 11:05:09,222 - ===========进入拦截器==============
+2018-05-25 11:05:51,849 - ===========进入拦截器==============
+2018-05-25 11:07:04,418 - ===========进入拦截器==============
+2018-05-25 11:07:05,767 - ===========进入拦截器==============
+2018-05-25 11:07:09,878 - ===========进入拦截器==============
+2018-05-25 11:09:55,242 - ===========进入拦截器==============
+2018-05-25 11:09:58,670 - ===========进入拦截器==============
+2018-05-25 11:12:33,401 - ===========进入拦截器==============
+2018-05-25 11:12:36,954 - ===========进入拦截器==============
+2018-05-25 11:16:28,684 - ===========进入拦截器==============
+2018-05-25 11:26:27,714 - ===========进入拦截器==============
+2018-05-25 11:44:50,700 - Starting PcenterApplication on SKY-20171023NXB with PID 6240 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 11:44:50,703 - No active profile set, falling back to default profiles: default
+2018-05-25 11:44:50,763 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ae412e4: startup date [Fri May 25 11:44:50 CST 2018]; root of context hierarchy
+2018-05-25 11:44:50,875 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 11:44:51,643 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 11:44:51,756 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 11:44:52,088 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$ab2f6f74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,150 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,156 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$52812f89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,248 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,259 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,260 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$11747182] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,275 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,276 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$708d8c29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 11:44:52,657 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 11:44:52,670 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 11:44:52,682 - Starting service [Tomcat]
+2018-05-25 11:44:52,683 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 11:44:52,802 - Initializing Spring embedded WebApplicationContext
+2018-05-25 11:44:52,803 - Root WebApplicationContext: initialization completed in 2039 ms
+2018-05-25 11:44:52,990 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 11:44:52,995 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 11:44:52,995 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 11:44:52,995 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 11:44:52,995 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 11:44:52,995 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 11:44:53,805 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@2ae412e4: startup date [Fri May 25 11:44:50 CST 2018]; root of context hierarchy
+2018-05-25 11:44:53,876 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 11:44:53,877 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 11:44:53,882 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 11:44:53,882 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 11:44:53,927 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:44:53,927 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:44:53,948 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 11:44:53,978 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 11:44:54,371 - LiveReload server is running on port 35729
+2018-05-25 11:44:54,534 - Registering beans for JMX exposure on startup
+2018-05-25 11:44:54,536 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 11:44:54,542 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 11:44:54,552 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 11:44:54,567 - Using a shared selector for servlet write/read
+2018-05-25 11:44:54,585 - Tomcat started on port(s): 8081 (http)
+2018-05-25 11:44:54,591 - Started PcenterApplication in 4.501 seconds (JVM running for 5.269)
+2018-05-25 11:45:13,701 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 11:45:13,701 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 11:45:13,730 - FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2018-05-25 11:45:13,854 - ===========进入拦截器==============
+2018-05-25 11:45:16,045 - ===========进入拦截器==============
+2018-05-25 11:45:16,106 - {dataSource-1} inited
+2018-05-25 11:46:36,561 - ===========进入拦截器==============
+2018-05-25 11:46:37,715 - ===========进入拦截器==============
+2018-05-25 11:54:56,981 - ===========进入拦截器==============
+2018-05-25 11:55:01,004 - ===========进入拦截器==============
+2018-05-25 13:41:46,141 - ===========进入拦截器==============
+2018-05-25 13:42:42,865 - ===========进入拦截器==============
+2018-05-25 13:43:44,194 - ===========进入拦截器==============
+2018-05-25 13:45:56,259 - ===========进入拦截器==============
+2018-05-25 13:46:09,546 - ===========进入拦截器==============
+2018-05-25 13:47:16,329 - ===========进入拦截器==============
+2018-05-25 13:50:14,477 - ===========进入拦截器==============
+2018-05-25 13:57:41,776 - ===========进入拦截器==============
+2018-05-25 13:57:56,051 - ===========进入拦截器==============
+2018-05-25 13:58:00,547 - ===========进入拦截器==============
+2018-05-25 13:58:14,652 - ===========进入拦截器==============
+2018-05-25 13:58:55,692 - ===========进入拦截器==============
+2018-05-25 14:32:36,872 - ===========进入拦截器==============
+2018-05-25 15:56:22,476 - Starting PcenterApplication on SKY-20171023NXB with PID 408 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 15:56:22,491 - No active profile set, falling back to default profiles: default
+2018-05-25 15:56:22,550 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6feef15: startup date [Fri May 25 15:56:22 CST 2018]; root of context hierarchy
+2018-05-25 15:56:22,772 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 15:56:23,608 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 15:56:23,722 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 15:56:24,082 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$79049c79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,175 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,182 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$20565c8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,272 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,281 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,283 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$df499e87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,295 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,296 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e62b92e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:56:24,942 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 15:56:24,986 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 15:56:25,006 - Starting service [Tomcat]
+2018-05-25 15:56:25,007 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 15:56:25,143 - Initializing Spring embedded WebApplicationContext
+2018-05-25 15:56:25,143 - Root WebApplicationContext: initialization completed in 2593 ms
+2018-05-25 15:56:25,336 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 15:56:25,340 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 15:56:25,341 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 15:56:25,341 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 15:56:25,341 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 15:56:25,341 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 15:56:26,225 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6feef15: startup date [Fri May 25 15:56:22 CST 2018]; root of context hierarchy
+2018-05-25 15:56:26,308 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 15:56:26,309 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 15:56:26,312 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 15:56:26,313 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 15:56:26,350 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:56:26,350 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:56:26,386 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 15:56:26,415 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:56:26,835 - LiveReload server is running on port 35729
+2018-05-25 15:56:26,997 - Registering beans for JMX exposure on startup
+2018-05-25 15:56:26,998 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 15:56:27,003 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 15:56:27,016 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 15:56:27,027 - Using a shared selector for servlet write/read
+2018-05-25 15:56:27,043 - Tomcat started on port(s): 8081 (http)
+2018-05-25 15:56:27,048 - Started PcenterApplication in 5.151 seconds (JVM running for 7.523)
+2018-05-25 15:57:49,836 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 15:57:49,836 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 15:57:49,863 - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-25 15:57:49,993 - ===========进入拦截器==============
+2018-05-25 15:57:50,084 - {dataSource-1} inited
+2018-05-25 15:57:50,557 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-05-25 15:57:50,737 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2018-05-25 15:59:10,296 - Starting PcenterApplication on SKY-20171023NXB with PID 1952 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 15:59:10,298 - No active profile set, falling back to default profiles: default
+2018-05-25 15:59:10,353 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b6cf4e3: startup date [Fri May 25 15:59:10 CST 2018]; root of context hierarchy
+2018-05-25 15:59:10,514 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 15:59:11,283 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 15:59:11,395 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 15:59:11,729 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$da260c60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,799 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,805 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$8177cc75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,892 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,902 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,903 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$406b0e6e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,916 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:11,916 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9f842915] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 15:59:12,264 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 15:59:12,277 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 15:59:12,287 - Starting service [Tomcat]
+2018-05-25 15:59:12,287 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 15:59:12,387 - Initializing Spring embedded WebApplicationContext
+2018-05-25 15:59:12,387 - Root WebApplicationContext: initialization completed in 2034 ms
+2018-05-25 15:59:12,582 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 15:59:12,588 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 15:59:12,588 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 15:59:12,588 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 15:59:12,588 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 15:59:12,588 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 15:59:13,241 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6b6cf4e3: startup date [Fri May 25 15:59:10 CST 2018]; root of context hierarchy
+2018-05-25 15:59:13,308 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 15:59:13,308 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 15:59:13,312 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 15:59:13,312 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 15:59:13,349 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:59:13,349 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:59:13,369 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 15:59:13,396 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 15:59:13,765 - LiveReload server is running on port 35729
+2018-05-25 15:59:13,925 - Registering beans for JMX exposure on startup
+2018-05-25 15:59:13,927 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 15:59:13,932 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 15:59:13,943 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 15:59:13,956 - Using a shared selector for servlet write/read
+2018-05-25 15:59:13,971 - Tomcat started on port(s): 8081 (http)
+2018-05-25 15:59:13,976 - Started PcenterApplication in 4.286 seconds (JVM running for 5.045)
+2018-05-25 15:59:22,629 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 15:59:22,629 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 15:59:22,654 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-05-25 15:59:22,763 - ===========进入拦截器==============
+2018-05-25 15:59:22,823 - {dataSource-1} inited
+2018-05-25 16:00:00,922 - ===========进入拦截器==============
+2018-05-25 16:00:16,037 - ===========进入拦截器==============
+2018-05-25 16:01:00,608 - ===========进入拦截器==============
+2018-05-25 16:01:02,530 - ===========进入拦截器==============
+2018-05-25 16:02:22,509 - Starting PcenterApplication on SKY-20171023NXB with PID 12476 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 16:02:22,511 - No active profile set, falling back to default profiles: default
+2018-05-25 16:02:22,556 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 16:02:22 CST 2018]; root of context hierarchy
+2018-05-25 16:02:22,727 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 16:02:23,428 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 16:02:23,536 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 16:02:23,871 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$2aa5b778] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:23,941 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:23,948 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$d1f7778d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,034 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,044 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,045 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$90eab986] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,058 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,059 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f003d42d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 16:02:24,405 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 16:02:24,418 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 16:02:24,429 - Starting service [Tomcat]
+2018-05-25 16:02:24,429 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 16:02:24,529 - Initializing Spring embedded WebApplicationContext
+2018-05-25 16:02:24,529 - Root WebApplicationContext: initialization completed in 1973 ms
+2018-05-25 16:02:24,714 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 16:02:24,719 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 16:02:24,720 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 16:02:24,720 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 16:02:24,720 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 16:02:24,720 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 16:02:25,390 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 16:02:22 CST 2018]; root of context hierarchy
+2018-05-25 16:02:25,455 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 16:02:25,456 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 16:02:25,459 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 16:02:25,459 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 16:02:25,495 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 16:02:25,495 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 16:02:25,514 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 16:02:25,543 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 16:02:25,908 - LiveReload server is running on port 35729
+2018-05-25 16:02:26,065 - Registering beans for JMX exposure on startup
+2018-05-25 16:02:26,066 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 16:02:26,070 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 16:02:26,082 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 16:02:26,094 - Using a shared selector for servlet write/read
+2018-05-25 16:02:26,109 - Tomcat started on port(s): 8081 (http)
+2018-05-25 16:02:26,115 - Started PcenterApplication in 4.174 seconds (JVM running for 4.949)
+2018-05-25 16:02:45,088 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 16:02:45,088 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 16:02:45,115 - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-25 16:02:45,224 - ===========进入拦截器==============
+2018-05-25 16:02:45,284 - {dataSource-1} inited
+2018-05-25 16:03:58,343 - ===========进入拦截器==============
+2018-05-25 16:05:31,908 - ===========进入拦截器==============
+2018-05-25 16:08:00,421 - ===========进入拦截器==============
+2018-05-25 16:08:51,299 - ===========进入拦截器==============
+2018-05-25 16:09:11,093 - ===========进入拦截器==============
+2018-05-25 16:09:47,092 - ===========进入拦截器==============
+2018-05-25 16:10:37,725 - ===========进入拦截器==============
+2018-05-25 16:11:59,262 - ===========进入拦截器==============
+2018-05-25 16:13:43,541 - ===========进入拦截器==============
+2018-05-25 16:15:00,124 - ===========进入拦截器==============
+2018-05-25 16:16:23,086 - ===========进入拦截器==============
+2018-05-25 16:16:57,517 - ===========进入拦截器==============
+2018-05-25 16:20:23,725 - ===========进入拦截器==============
+2018-05-25 16:21:52,421 - ===========进入拦截器==============
+2018-05-25 16:22:10,638 - ===========进入拦截器==============
+2018-05-25 16:22:40,757 - ===========进入拦截器==============
+2018-05-25 16:22:59,747 - ===========进入拦截器==============
+2018-05-25 16:23:30,324 - ===========进入拦截器==============
+2018-05-25 16:23:33,150 - ===========进入拦截器==============
+2018-05-25 16:24:16,132 - ===========进入拦截器==============
+2018-05-25 16:24:17,783 - ===========进入拦截器==============
+2018-05-25 16:25:13,965 - ===========进入拦截器==============
+2018-05-25 16:25:17,583 - ===========进入拦截器==============
+2018-05-25 16:25:48,939 - ===========进入拦截器==============
+2018-05-25 16:25:53,332 - ===========进入拦截器==============
+2018-05-25 16:26:42,508 - ===========进入拦截器==============
+2018-05-25 16:26:44,093 - ===========进入拦截器==============
+2018-05-25 16:32:23,135 - ===========进入拦截器==============
+2018-05-25 16:32:24,797 - ===========进入拦截器==============
+2018-05-25 16:33:44,495 - ===========进入拦截器==============
+2018-05-25 16:33:48,513 - ===========进入拦截器==============
+2018-05-25 16:34:29,780 - ===========进入拦截器==============
+2018-05-25 16:34:35,543 - ===========进入拦截器==============
+2018-05-25 16:35:33,463 - ===========进入拦截器==============
+2018-05-25 16:35:59,103 - ===========进入拦截器==============
+2018-05-25 16:36:25,671 - ===========进入拦截器==============
+2018-05-25 16:36:32,872 - ===========进入拦截器==============
+2018-05-25 16:38:08,566 - ===========进入拦截器==============
+2018-05-25 16:38:32,648 - ===========进入拦截器==============
+2018-05-25 16:40:59,638 - ===========进入拦截器==============
+2018-05-25 16:41:11,561 - ===========进入拦截器==============
+2018-05-25 16:42:11,482 - ===========进入拦截器==============
+2018-05-25 16:54:51,191 - ===========进入拦截器==============
+2018-05-25 16:55:08,960 - ===========进入拦截器==============
+2018-05-25 16:55:28,592 - ===========进入拦截器==============
+2018-05-25 16:55:40,762 - ===========进入拦截器==============
+2018-05-25 16:58:52,793 - ===========进入拦截器==============
+2018-05-25 16:58:54,922 - ===========进入拦截器==============
+2018-05-25 17:00:09,152 - ===========进入拦截器==============
+2018-05-25 17:00:11,394 - ===========进入拦截器==============
+2018-05-25 17:09:50,845 - ===========进入拦截器==============
+2018-05-25 17:10:57,228 - ===========进入拦截器==============
+2018-05-25 17:11:12,306 - ===========进入拦截器==============
+2018-05-25 17:12:30,499 - ===========进入拦截器==============
+2018-05-25 17:12:41,738 - ===========进入拦截器==============
+2018-05-25 17:13:17,233 - ===========进入拦截器==============
+2018-05-25 17:13:30,106 - ===========进入拦截器==============
+2018-05-25 17:19:06,884 - ===========进入拦截器==============
+2018-05-25 17:19:24,715 - ===========进入拦截器==============
+2018-05-25 17:19:44,020 - ===========进入拦截器==============
+2018-05-25 17:20:14,508 - ===========进入拦截器==============
+2018-05-25 17:20:38,217 - ===========进入拦截器==============
+2018-05-25 17:21:29,707 - ===========进入拦截器==============
+2018-05-25 17:22:42,925 - ===========进入拦截器==============
+2018-05-25 17:24:17,291 - Starting PcenterApplication on SKY-20171023NXB with PID 1936 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 17:24:17,294 - No active profile set, falling back to default profiles: default
+2018-05-25 17:24:17,345 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40b50e4a: startup date [Fri May 25 17:24:17 CST 2018]; root of context hierarchy
+2018-05-25 17:24:17,467 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 17:24:18,239 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 17:24:18,355 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 17:24:18,688 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$7d8263f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,768 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,775 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$24d4240d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,868 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,878 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,878 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$e3c76606] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,894 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:18,895 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$42e080ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:24:19,249 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 17:24:19,262 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:24:19,273 - Starting service [Tomcat]
+2018-05-25 17:24:19,273 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 17:24:19,375 - Initializing Spring embedded WebApplicationContext
+2018-05-25 17:24:19,375 - Root WebApplicationContext: initialization completed in 2030 ms
+2018-05-25 17:24:19,564 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 17:24:19,570 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 17:24:19,570 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 17:24:19,570 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 17:24:19,571 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 17:24:19,571 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 17:24:20,265 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@40b50e4a: startup date [Fri May 25 17:24:17 CST 2018]; root of context hierarchy
+2018-05-25 17:24:20,333 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 17:24:20,334 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 17:24:20,337 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 17:24:20,338 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 17:24:20,377 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:24:20,377 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:24:20,398 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 17:24:20,424 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:24:20,787 - LiveReload server is running on port 35729
+2018-05-25 17:24:20,948 - Registering beans for JMX exposure on startup
+2018-05-25 17:24:20,949 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 17:24:20,954 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 17:24:20,965 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:24:20,977 - Using a shared selector for servlet write/read
+2018-05-25 17:24:20,991 - Tomcat started on port(s): 8081 (http)
+2018-05-25 17:24:20,996 - Started PcenterApplication in 4.453 seconds (JVM running for 5.199)
+2018-05-25 17:24:57,864 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 17:24:57,864 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 17:24:57,891 - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+2018-05-25 17:24:58,003 - ===========进入拦截器==============
+2018-05-25 17:24:58,066 - {dataSource-1} inited
+2018-05-25 17:27:05,458 - ===========进入拦截器==============
+2018-05-25 17:27:44,551 - ===========进入拦截器==============
+2018-05-25 17:28:48,438 - ===========进入拦截器==============
+2018-05-25 17:28:52,678 - ===========进入拦截器==============
+2018-05-25 17:33:29,512 - Starting PcenterApplication on SKY-20171023NXB with PID 12532 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 17:33:29,514 - No active profile set, falling back to default profiles: default
+2018-05-25 17:33:29,573 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 17:33:29 CST 2018]; root of context hierarchy
+2018-05-25 17:33:29,711 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 17:33:30,408 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 17:33:30,519 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 17:33:30,852 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$55b89cc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:30,924 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:30,930 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$fd0a5cd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,019 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,029 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,030 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$bbfd9ed0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,044 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,044 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1b16b977] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:33:31,404 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 17:33:31,417 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:33:31,428 - Starting service [Tomcat]
+2018-05-25 17:33:31,429 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 17:33:31,531 - Initializing Spring embedded WebApplicationContext
+2018-05-25 17:33:31,531 - Root WebApplicationContext: initialization completed in 1958 ms
+2018-05-25 17:33:31,720 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 17:33:31,725 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 17:33:31,726 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 17:33:31,726 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 17:33:31,726 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 17:33:31,726 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 17:33:32,402 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9b2d449: startup date [Fri May 25 17:33:29 CST 2018]; root of context hierarchy
+2018-05-25 17:33:32,480 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 17:33:32,481 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 17:33:32,485 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 17:33:32,486 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 17:33:32,530 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:33:32,531 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:33:32,561 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 17:33:32,610 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:33:33,041 - LiveReload server is running on port 35729
+2018-05-25 17:33:33,204 - Registering beans for JMX exposure on startup
+2018-05-25 17:33:33,205 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 17:33:33,213 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 17:33:33,226 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:33:33,242 - Using a shared selector for servlet write/read
+2018-05-25 17:33:33,259 - Tomcat started on port(s): 8081 (http)
+2018-05-25 17:33:33,265 - Started PcenterApplication in 4.457 seconds (JVM running for 5.213)
+2018-05-25 17:33:46,442 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 17:33:46,442 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 17:33:46,467 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-05-25 17:33:46,584 - ===========进入拦截器==============
+2018-05-25 17:33:49,253 - ===========进入拦截器==============
+2018-05-25 17:33:49,309 - {dataSource-1} inited
+2018-05-25 17:34:36,326 - ===========进入拦截器==============
+2018-05-25 17:34:38,934 - ===========进入拦截器==============
+2018-05-25 17:38:00,922 - Starting PcenterApplication on SKY-20171023NXB with PID 13656 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 17:38:00,926 - No active profile set, falling back to default profiles: default
+2018-05-25 17:38:00,983 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58820151: startup date [Fri May 25 17:38:00 CST 2018]; root of context hierarchy
+2018-05-25 17:38:01,117 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 17:38:01,894 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 17:38:02,003 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 17:38:02,321 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$4e40584c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,391 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,398 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f5921861] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,490 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,499 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,500 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$b4855a5a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,513 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,514 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$139e7501] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:38:02,890 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 17:38:02,903 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:38:02,912 - Starting service [Tomcat]
+2018-05-25 17:38:02,913 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 17:38:03,019 - Initializing Spring embedded WebApplicationContext
+2018-05-25 17:38:03,019 - Root WebApplicationContext: initialization completed in 2036 ms
+2018-05-25 17:38:03,209 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 17:38:03,214 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 17:38:03,215 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 17:38:03,215 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 17:38:03,215 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 17:38:03,215 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 17:38:03,901 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@58820151: startup date [Fri May 25 17:38:00 CST 2018]; root of context hierarchy
+2018-05-25 17:38:03,974 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 17:38:03,975 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 17:38:03,978 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 17:38:03,978 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 17:38:04,013 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:38:04,013 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:38:04,033 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 17:38:04,060 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:38:04,441 - LiveReload server is running on port 35729
+2018-05-25 17:38:04,603 - Registering beans for JMX exposure on startup
+2018-05-25 17:38:04,604 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 17:38:04,610 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 17:38:04,620 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:38:04,631 - Using a shared selector for servlet write/read
+2018-05-25 17:38:04,646 - Tomcat started on port(s): 8081 (http)
+2018-05-25 17:38:04,652 - Started PcenterApplication in 4.315 seconds (JVM running for 5.121)
+2018-05-25 17:38:30,508 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 17:38:30,509 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 17:38:30,534 - FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2018-05-25 17:38:30,650 - ===========进入拦截器==============
+2018-05-25 17:38:30,716 - {dataSource-1} inited
+2018-05-25 17:38:31,004 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+2018-05-25 17:38:31,044 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+2018-05-25 17:40:09,913 - Starting PcenterApplication on SKY-20171023NXB with PID 5644 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 17:40:09,915 - No active profile set, falling back to default profiles: default
+2018-05-25 17:40:09,978 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1bc7242b: startup date [Fri May 25 17:40:09 CST 2018]; root of context hierarchy
+2018-05-25 17:40:10,121 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 17:40:10,877 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 17:40:10,988 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 17:40:11,315 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$78add2a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,385 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,391 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$aedc9d3f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,477 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,487 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,488 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$6dcfdf38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,500 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,501 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cce8f9df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:40:11,860 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 17:40:11,873 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:40:11,884 - Starting service [Tomcat]
+2018-05-25 17:40:11,884 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 17:40:11,983 - Initializing Spring embedded WebApplicationContext
+2018-05-25 17:40:11,983 - Root WebApplicationContext: initialization completed in 2005 ms
+2018-05-25 17:40:12,175 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 17:40:12,180 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 17:40:12,181 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 17:40:12,181 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 17:40:12,181 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 17:40:12,181 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 17:40:12,850 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1bc7242b: startup date [Fri May 25 17:40:09 CST 2018]; root of context hierarchy
+2018-05-25 17:40:12,915 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 17:40:12,916 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 17:40:12,919 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 17:40:12,919 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 17:40:12,954 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:40:12,954 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:40:12,974 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 17:40:13,001 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:40:13,380 - LiveReload server is running on port 35729
+2018-05-25 17:40:13,539 - Registering beans for JMX exposure on startup
+2018-05-25 17:40:13,540 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 17:40:13,545 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 17:40:13,557 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:40:13,572 - Using a shared selector for servlet write/read
+2018-05-25 17:40:13,588 - Tomcat started on port(s): 8081 (http)
+2018-05-25 17:40:13,596 - Started PcenterApplication in 4.26 seconds (JVM running for 5.006)
+2018-05-25 17:40:24,474 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 17:40:24,474 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 17:40:24,500 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-05-25 17:40:24,617 - ===========进入拦截器==============
+2018-05-25 17:40:24,683 - {dataSource-1} inited
+2018-05-25 17:41:41,274 - Starting PcenterApplication on SKY-20171023NXB with PID 11824 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 17:41:41,277 - No active profile set, falling back to default profiles: default
+2018-05-25 17:41:41,342 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51235351: startup date [Fri May 25 17:41:41 CST 2018]; root of context hierarchy
+2018-05-25 17:41:41,444 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 17:41:42,177 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 17:41:42,286 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 17:41:42,617 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$96a1e39c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,685 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,692 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$3df3a3b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,779 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,789 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,790 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$fce6e5aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,803 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:42,804 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c000051] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 17:41:43,162 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 17:41:43,175 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:41:43,186 - Starting service [Tomcat]
+2018-05-25 17:41:43,186 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 17:41:43,289 - Initializing Spring embedded WebApplicationContext
+2018-05-25 17:41:43,289 - Root WebApplicationContext: initialization completed in 1947 ms
+2018-05-25 17:41:43,479 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 17:41:43,484 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 17:41:43,484 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 17:41:43,484 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 17:41:43,484 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 17:41:43,484 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 17:41:44,187 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51235351: startup date [Fri May 25 17:41:41 CST 2018]; root of context hierarchy
+2018-05-25 17:41:44,268 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 17:41:44,269 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 17:41:44,273 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 17:41:44,274 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 17:41:44,316 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:41:44,316 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:41:44,340 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 17:41:44,371 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 17:41:44,757 - LiveReload server is running on port 35729
+2018-05-25 17:41:44,923 - Registering beans for JMX exposure on startup
+2018-05-25 17:41:44,925 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 17:41:44,931 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 17:41:44,944 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 17:41:44,957 - Using a shared selector for servlet write/read
+2018-05-25 17:41:44,972 - Tomcat started on port(s): 8081 (http)
+2018-05-25 17:41:44,977 - Started PcenterApplication in 4.253 seconds (JVM running for 5.024)
+2018-05-25 17:41:52,312 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 17:41:52,312 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 17:41:52,339 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-05-25 17:41:52,452 - ===========进入拦截器==============
+2018-05-25 17:41:52,512 - {dataSource-1} inited
+2018-05-25 17:42:09,760 - ===========进入拦截器==============
+2018-05-25 17:42:46,854 - ===========进入拦截器==============
+2018-05-25 17:42:49,726 - ===========进入拦截器==============
+2018-05-25 17:58:54,527 - ===========进入拦截器==============
+2018-05-25 17:58:57,672 - ===========进入拦截器==============
+2018-05-25 17:59:54,536 - ===========进入拦截器==============
+2018-05-25 17:59:58,992 - ===========进入拦截器==============
+2018-05-25 18:02:46,297 - ===========进入拦截器==============
+2018-05-25 18:02:48,586 - ===========进入拦截器==============
+2018-05-25 18:03:33,359 - ===========进入拦截器==============
+2018-05-25 18:03:35,609 - ===========进入拦截器==============
+2018-05-25 18:05:34,090 - ===========进入拦截器==============
+2018-05-25 18:05:36,930 - ===========进入拦截器==============
+2018-05-25 18:07:22,587 - ===========进入拦截器==============
+2018-05-25 18:07:24,953 - ===========进入拦截器==============
+2018-05-25 18:07:42,992 - ===========进入拦截器==============
+2018-05-25 18:07:45,202 - ===========进入拦截器==============
+2018-05-25 18:08:41,887 - ===========进入拦截器==============
+2018-05-25 18:08:44,378 - ===========进入拦截器==============
+2018-05-25 18:12:28,098 - ===========进入拦截器==============
+2018-05-25 18:12:30,042 - ===========进入拦截器==============
+2018-05-25 18:13:54,123 - ===========进入拦截器==============
+2018-05-25 18:13:56,331 - ===========进入拦截器==============
+2018-05-25 18:16:57,290 - ===========进入拦截器==============
+2018-05-25 18:16:59,187 - ===========进入拦截器==============
+2018-05-25 18:17:16,356 - ===========进入拦截器==============
+2018-05-25 18:18:22,604 - ===========进入拦截器==============
+2018-05-25 18:18:25,716 - ===========进入拦截器==============
+2018-05-25 18:21:40,746 - ===========进入拦截器==============
+2018-05-25 18:21:42,627 - ===========进入拦截器==============
+2018-05-25 18:23:03,293 - ===========进入拦截器==============
+2018-05-25 18:23:05,099 - ===========进入拦截器==============
+2018-05-25 18:23:45,106 - ===========进入拦截器==============
+2018-05-25 18:23:47,035 - ===========进入拦截器==============
+2018-05-25 18:24:51,500 - ===========进入拦截器==============
+2018-05-25 18:24:53,524 - ===========进入拦截器==============
+2018-05-25 18:25:17,618 - ===========进入拦截器==============
+2018-05-25 18:25:19,459 - ===========进入拦截器==============
+2018-05-25 18:26:50,726 - ===========进入拦截器==============
+2018-05-25 18:26:52,541 - ===========进入拦截器==============
+2018-05-25 18:29:03,539 - ===========进入拦截器==============
+2018-05-25 18:29:05,404 - ===========进入拦截器==============
+2018-05-25 18:30:03,514 - ===========进入拦截器==============
+2018-05-25 18:30:05,317 - ===========进入拦截器==============
+2018-05-25 18:31:44,652 - ===========进入拦截器==============
+2018-05-25 18:31:45,836 - ===========进入拦截器==============
+2018-05-25 18:39:37,786 - Starting PcenterApplication on SKY-20171023NXB with PID 4156 (D:\project\2018\project\pcenter\target\classes started by Administrator in D:\project\2018\project\pcenter)
+2018-05-25 18:39:37,789 - No active profile set, falling back to default profiles: default
+2018-05-25 18:39:37,845 - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d2abc93: startup date [Fri May 25 18:39:37 CST 2018]; root of context hierarchy
+2018-05-25 18:39:37,995 - HV000001: Hibernate Validator 5.3.6.Final
+2018-05-25 18:39:38,687 - Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-05-25 18:39:38,800 - Cannot enhance @Configuration bean definition 'myBatisMapperScannerConfig' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2018-05-25 18:39:39,121 - Bean 'PCenterConfig' of type [com.flowyj.pcenter.config.PCenterConfig$$EnhancerBySpringCGLIB$$4861d84d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,189 - Bean 'primaryDataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,195 - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$efb39862] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,281 - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,292 - Bean 'dataSourceInitializer' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,293 - Bean 'myBatisConfig' of type [com.flowyj.pcenter.config.MyBatisConfig$$EnhancerBySpringCGLIB$$aea6da5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,305 - Bean 'annotationDrivenTransactionManager' of type [org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,306 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dbff502] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-05-25 18:39:39,656 - Tomcat initialized with port(s): 8081 (http)
+2018-05-25 18:39:39,668 - Initializing ProtocolHandler ["http-nio-8081"]
+2018-05-25 18:39:39,679 - Starting service [Tomcat]
+2018-05-25 18:39:39,679 - Starting Servlet Engine: Apache Tomcat/8.5.29
+2018-05-25 18:39:39,789 - Initializing Spring embedded WebApplicationContext
+2018-05-25 18:39:39,789 - Root WebApplicationContext: initialization completed in 1944 ms
+2018-05-25 18:39:40,020 - Mapping servlet: 'dispatcherServlet' to [/]
+2018-05-25 18:39:40,025 - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-05-25 18:39:40,026 - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-05-25 18:39:40,026 - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-05-25 18:39:40,026 - Mapping filter: 'requestContextFilter' to: [/*]
+2018-05-25 18:39:40,026 - Mapping filter: 'originFilter' to: [/*]
+2018-05-25 18:39:40,707 - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3d2abc93: startup date [Fri May 25 18:39:37 CST 2018]; root of context hierarchy
+2018-05-25 18:39:40,769 - Mapped "{[/login],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.login(java.lang.String,java.lang.String)
+2018-05-25 18:39:40,770 - Mapped "{[/loginOut],methods=[GET]}" onto public com.flowyj.pcenter.domain.common.Result com.flowyj.pcenter.controller.LoginController.loginOut(java.lang.String)
+2018-05-25 18:39:40,773 - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-05-25 18:39:40,774 - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-05-25 18:39:40,807 - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 18:39:40,807 - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 18:39:40,826 - Detected @ExceptionHandler methods in exceptionHandle
+2018-05-25 18:39:40,853 - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-05-25 18:39:41,238 - LiveReload server is running on port 35729
+2018-05-25 18:39:41,391 - Registering beans for JMX exposure on startup
+2018-05-25 18:39:41,392 - Bean with name 'primaryDataSource' has been autodetected for JMX exposure
+2018-05-25 18:39:41,397 - Located MBean 'primaryDataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=primaryDataSource,type=DruidDataSource]
+2018-05-25 18:39:41,408 - Starting ProtocolHandler ["http-nio-8081"]
+2018-05-25 18:39:41,419 - Using a shared selector for servlet write/read
+2018-05-25 18:39:41,432 - Tomcat started on port(s): 8081 (http)
+2018-05-25 18:39:41,437 - Started PcenterApplication in 4.194 seconds (JVM running for 4.921)
+2018-05-25 18:39:47,792 - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-05-25 18:39:47,792 - FrameworkServlet 'dispatcherServlet': initialization started
+2018-05-25 18:39:47,818 - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2018-05-25 18:39:47,926 - ===========进入拦截器==============
+2018-05-25 18:39:49,191 - ===========进入拦截器==============
+2018-05-25 18:39:49,245 - {dataSource-1} inited
+2018-05-25 18:39:55,059 - ===========进入拦截器==============
+2018-05-25 18:39:56,204 - ===========进入拦截器==============
