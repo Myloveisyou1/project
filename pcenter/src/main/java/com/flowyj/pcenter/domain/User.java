@@ -9,13 +9,15 @@ import lombok.Data;
  * @Date: create in 2018/5/24 0024 16:51
  */
 @Data
-public class User extends Base{
+public class User{
 
     private Long gid;
 
     private String userName;
 
     private String password;
+
+    private String tel;
 
     private String email;
 
@@ -24,5 +26,13 @@ public class User extends Base{
     private String roleName;
 
     private String loginTime;
+
+    private Long version;
+
+    private String createTime;
+
+    private String updateTime;
+
+    private Integer status;
 
 }

@@ -20,7 +20,9 @@ public enum ResultEnum {
     NOT_LOGIN(209,"账户未登录或登陆已失效"),
     EMPTY_SESSIONID(210,"sessionId不能为空"),
     PAGENUM_ERROR(211,"页码必须大于0"),
-    USER_DISABLED(212,"账户被禁用");
+    USER_DISABLED(212,"账户被禁用"),
+    ERROR_OLD_PASSWORD(213,"原始密码错误"),
+    SAME_USER(214,"账户已存在");
     private Integer code;
 
     private String msg;
