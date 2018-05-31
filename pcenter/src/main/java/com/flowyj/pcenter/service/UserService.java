@@ -54,6 +54,14 @@ public class UserService {
             if (CommonUtil.isNotEmpty(bean.getTel())) {
                 user.setTel(bean.getTel());
             }
+            if (CommonUtil.isNotEmpty(bean.getRoleId())) {
+                Role role = roleMapper.findById(bean.getRoleId());
+                if (CommonUtil.isNotEmpty(role)) {
+                    user.setRoleId(bean.getRoleId());
+                    user.setRoleName(role.getRoleName());
+                }
+
+            }
             if (CommonUtil.isNotEmpty(bean.getStatus())) {
                 user.setStatus(bean.getStatus());
             }

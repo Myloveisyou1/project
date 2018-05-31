@@ -10,11 +10,11 @@ import lombok.Data;
 @Data
 public class Base {
 
-    private Long version;
+    public Long version;
 
-    private String createTime;
+    public String createTime;
 
-    private String updateTime;
+    public String updateTime;
 
-    private Integer status;
+    public Integer status;
 }

@@ -22,7 +22,9 @@ public enum ResultEnum {
     PAGENUM_ERROR(211,"页码必须大于0"),
     USER_DISABLED(212,"账户被禁用"),
     ERROR_OLD_PASSWORD(213,"原始密码错误"),
-    SAME_USER(214,"账户已存在");
+    SAME_USER(214,"账户已存在"),
+    ROLE_DISABLED(215,"角色被禁用"),
+    SAME_ROLE(216,"角色已存在");
     private Integer code;
 
     private String msg;

@@ -3,11 +3,15 @@ package com.flowyj.pcenter.service;
 import com.alibaba.fastjson.JSONObject;
 import com.flowyj.pcenter.domain.Menu;
 import com.flowyj.pcenter.domain.MenuList;
+import com.flowyj.pcenter.domain.Role;
 import com.flowyj.pcenter.domain.User;
 import com.flowyj.pcenter.enums.ResultEnum;
 import com.flowyj.pcenter.exception.PCenterException;
 import com.flowyj.pcenter.mapper.MenuMapper;
+import com.flowyj.pcenter.mapper.RoleMapper;
 import com.flowyj.pcenter.mapper.UserMapper;
+import com.flowyj.pcenter.utils.BaseUtils;
+import com.flowyj.pcenter.utils.CommonUtil;
 import com.flowyj.pcenter.utils.DatesUtils;
 import com.flowyj.pcenter.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +35,9 @@ public class LoginService {
 
     @Autowired
     private MenuMapper menuMapper;
+
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
@@ -64,35 +71,18 @@ public class LoginService {
 
                     //获取权限信息
                     Long roleId = user.getRoleId();
+                    //判断角色是否可用
+                    Role role = roleMapper.findById(roleId);
+                    if (CommonUtil.isNotEmpty(role)) {
+                        if (role.getStatus() == 1) {
+                            throw new PCenterException(ResultEnum.ROLE_DISABLED);
+                        }
+                    }
                     List<Menu> menuList = menuMapper.findMenuByRole(roleId);
                     //最终返回的权限
                     List<MenuList> backList = new ArrayList<>();
                     if (menuList != null && menuList.size() > 0) {
-                        for (int i=0;i<menuList.size();i++) {
-                            MenuList bean = new MenuList();
-                            Menu mi = menuList.get(i);
-                            if (mi.getParentCode() == 0) {
-                                List<MenuList> list = new ArrayList<>();
-                                for (int j=i+1;j<menuList.size();j++) {
-                                    Menu mj = menuList.get(j);
-                                    MenuList beanj = new MenuList();
-                                    if (mi.getCode() == mj.getParentCode()) {
-                                        beanj.setGid(mj.getGid());
-                                        beanj.setMenuName(mj.getMenuName());
-                                        beanj.setIcon(mj.getIcon());
-                                        beanj.setUrl(mj.getUrl());
-                                        list.add(beanj);
-                                    }
-                                }
-                                bean.setGid(mi.getGid());
-                                bean.setMenuName(mi.getMenuName());
-                                bean.setIcon(mi.getIcon());
-                                bean.setUrl(mi.getUrl());
-                                bean.setMenuList(list);
-                                backList.add(bean);
-                            }
-
-                        }
+                        backList = BaseUtils.getMenuList(menuList);
                     }
                     map.put("menu",backList);
                     //修改登录时间

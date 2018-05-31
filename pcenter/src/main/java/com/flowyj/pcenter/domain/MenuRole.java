@@ -3,18 +3,18 @@ package com.flowyj.pcenter.domain;
 import lombok.Data;
 
 /**
- * @Descript:  角色实体
+ * @Descript:   角色权限关联
  * @Author: liuyingjie
- * @Date: create in 2018/5/29 0029 17:35
+ * @Date: create in 2018/5/31 0031 14:29
  */
 @Data
-public class Role{
+public class MenuRole {
 
     private Long gid;
 
-    private String roleName;
+    private Long roleId;
 
-    private String roleNameEn;
+    private Long menuId;
 
     private Long version;
 
