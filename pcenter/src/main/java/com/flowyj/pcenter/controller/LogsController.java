@@ -24,11 +24,12 @@ public class LogsController {
     @Autowired
     private LogService logService;
 
-    @GetMapping(value = "/logsList")
-    public Result findLogsList(@RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize) {
+    @GetMapping(value = "/logsList",produces =  { "application/json;charset=UTF-8" })
+    public Result findLogsList(@RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize,
+                               @RequestParam(value = "startTime",required = false) String startTime,@RequestParam(value = "endTime",required = false) String endTime) {
 
 
-        Map<String,Object> map = logService.pagingQueryLogs(pageNum,pageSize);
+        Map<String,Object> map = logService.pagingQueryLogs(pageNum,pageSize,startTime,endTime);
         Pages pages = (Pages) map.get("pages");
         pages.setPageNumber(pageNum);
         pages.setPageSize(pageSize);

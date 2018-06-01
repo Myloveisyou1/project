@@ -1,6 +1,7 @@
 package com.flowyj.pcenter.mapper;
 
 import com.flowyj.pcenter.domain.Logs;
+import com.flowyj.pcenter.provider.BaseProvider;
 import com.flowyj.pcenter.utils.SimpleInsertLangDriver;
 import com.flowyj.pcenter.utils.SimpleUpdateLangDriver;
 import org.apache.ibatis.annotations.*;
@@ -26,10 +27,10 @@ public interface LogsMapper {
     @Lang(SimpleUpdateLangDriver.class)
     void optUpdateLogs(Logs logs);
 
-    @Select("select gid,url,method,ip,class_method classMethod,args,start_time startTime,end_time endTime,time,rep_data repData from logs order by gid desc limit #{start},#{end}")
-    List<Logs> pagingQueryLogs(@Param(value = "start") Integer start,@Param(value = "end") Integer end);
+    @SelectProvider(type = BaseProvider.class,method = "pagingQueryLogs")
+    List<Logs> pagingQueryLogs(@Param(value = "start") Integer start,@Param(value = "end") Integer end,@Param(value = "startTime") String startTime,@Param(value = "endTime") String endTime);
 
 
-    @Select("select count(gid) count from logs")
-    int pagingQueryLogsCount();
+    @SelectProvider(type = BaseProvider.class,method = "pagingQueryLogsCount")
+    int pagingQueryLogsCount(@Param(value = "startTime") String startTime,@Param(value = "endTime") String endTime);
 }

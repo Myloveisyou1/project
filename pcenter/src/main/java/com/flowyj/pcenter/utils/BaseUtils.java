@@ -13,7 +13,12 @@ import java.util.List;
  */
 public class BaseUtils {
 
-    public static List<MenuList> getMenuList(List<Menu> menuList) {
+    /**
+     * 统一处理登陆的时候返回的权限列表
+     * @param menuList
+     * @return
+     */
+    public static List<MenuList> getMenuListForLogin(List<Menu> menuList) {
 
         List<MenuList> backList = new ArrayList<>();
         for (int i=0;i<menuList.size();i++) {
@@ -46,5 +51,38 @@ public class BaseUtils {
         }
 
         return backList;
+    }
+
+    /**
+     * 菜单列表
+     * @param menuList
+     * @return
+     */
+    public static List<Menu> getMenuList(List<Menu> menuList) {
+
+        List<Menu> backList = new ArrayList<>();
+        for (int i=0;i<menuList.size();i++) {
+            Menu mi = menuList.get(i);
+            if (mi.getParentCode() == 0) {
+                List<Menu> list = new ArrayList<>();
+                for (int j=0;j<menuList.size();j++) {
+                    Menu mj = menuList.get(j);
+                    if (mj.getParentCode() != 0) {
+                        if (mi.getCode() == mj.getParentCode()) {
+
+                            list.add(mj);
+                        }
+                    }
+
+                }
+
+                mi.setMenuList(list);
+                backList.add(mi);
+            }
+
+        }
+
+        return backList;
+
     }
 }

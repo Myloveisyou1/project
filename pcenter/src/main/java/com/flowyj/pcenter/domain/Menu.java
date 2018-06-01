@@ -20,6 +20,7 @@ public class Menu extends Base{
     private String url;
     private Integer parentCode;
     private Integer code;
-    private Integer belong;
+    private Long belong;
+    private String projectName;
     private List<Menu> menuList;
 }

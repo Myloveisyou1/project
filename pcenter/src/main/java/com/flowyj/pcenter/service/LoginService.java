@@ -82,7 +82,7 @@ public class LoginService {
                     //最终返回的权限
                     List<MenuList> backList = new ArrayList<>();
                     if (menuList != null && menuList.size() > 0) {
-                        backList = BaseUtils.getMenuList(menuList);
+                        backList = BaseUtils.getMenuListForLogin(menuList);
                     }
                     map.put("menu",backList);
                     //修改登录时间
@@ -130,5 +130,28 @@ public class LoginService {
         stringRedisTemplate.delete(sessionId);
         stringRedisTemplate.delete("sessionId");
         return true;
+    }
+
+    /**
+     * \校验权限,后期权限写入数据库
+     * @param sessionId
+     * @return
+     */
+    public boolean checkPermission(String sessionId) {
+
+        boolean flag = stringRedisTemplate.hasKey(sessionId);
+        if(flag){
+            //重新设置session有效期
+            String str = stringRedisTemplate.opsForValue().get(sessionId);
+            JSONObject jsonObject = JSONObject.parseObject(str);
+            if (jsonObject.get("roleName").equals("超级管理员") || jsonObject.get("roleId").equals("1")) {
+                flag = true;
+            } else {
+                flag = false;
+            }
+        }else{
+            throw new PCenterException(ResultEnum.NOT_LOGIN);
+        }
+        return flag;
     }
 }

@@ -1,7 +1,7 @@
 package com.flowyj.pcenter.mapper;
 
 import com.flowyj.pcenter.domain.User;
-import com.flowyj.pcenter.provider.UserProvider;
+import com.flowyj.pcenter.provider.BaseProvider;
 import com.flowyj.pcenter.utils.SimpleInsertLangDriver;
 import com.flowyj.pcenter.utils.SimpleUpdateLangDriver;
 import org.apache.ibatis.annotations.*;
@@ -39,7 +39,7 @@ public interface UserMapper {
      * 查询所有用户
      * @return
      */
-    @SelectProvider(type = UserProvider.class,method = "findAllUser")
+    @SelectProvider(type = BaseProvider.class,method = "findAllUser")
     List<User> findAllUser(@Param("userName") String userName);
 
     /**

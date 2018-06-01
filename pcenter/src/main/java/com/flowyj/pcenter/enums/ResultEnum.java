@@ -24,7 +24,8 @@ public enum ResultEnum {
     ERROR_OLD_PASSWORD(213,"原始密码错误"),
     SAME_USER(214,"账户已存在"),
     ROLE_DISABLED(215,"角色被禁用"),
-    SAME_ROLE(216,"角色已存在");
+    SAME_ROLE(216,"角色已存在"),
+    NO_PERMISSION(217,"暂无此权限" );
     private Integer code;
 
     private String msg;

@@ -4,6 +4,7 @@ import com.flowyj.pcenter.domain.Role;
 import com.flowyj.pcenter.domain.common.Result;
 import com.flowyj.pcenter.service.RoleService;
 import com.flowyj.pcenter.utils.ResultUtil;
+import com.mysql.jdbc.util.ResultSetUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -78,5 +79,15 @@ public class RoleController {
     public Result updateRomeMenu(Role role,@RequestParam(value = "ymenus") String ymenus,@RequestParam(value = "nmenus")String nmenus) {
 
         return ResultUtil.success(service.updateRomeMenu(role,ymenus,nmenus),null);
+    }
+
+    /**
+     * 删除角色
+     * @return
+     */
+    @GetMapping(value = "/deleteRole")
+    public Result deleteRole(@RequestParam(value = "gid") Long gid) {
+
+        return ResultUtil.success(service.deleteRole(gid),null);
     }
 }

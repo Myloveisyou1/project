@@ -37,6 +37,18 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
         //校验sessionId是否正确
         if(service.check(sessionId)){
+
+            //校验是否敏感操作,删除数据之类
+            if (httpServletRequest.getRequestURL().indexOf("delete") != -1) {
+
+                //校验是否有用删除权限
+                if(service.checkPermission(sessionId)) {
+                    return true;
+                } else {
+                    throw new PCenterException(ResultEnum.NO_PERMISSION);
+                }
+
+            }
             return true;
         }
         return false;

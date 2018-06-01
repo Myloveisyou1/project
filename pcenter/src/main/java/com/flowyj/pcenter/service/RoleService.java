@@ -197,4 +197,20 @@ public class RoleService {
     public List<Menu> findMenuByRole(Long roleId) {
         return menuMapper.findMenuByRole(roleId);
     }
+
+    /**
+     * 删除角色
+     * @param gid
+     * @return
+     */
+    @Transactional(rollbackFor = RuntimeException.class)
+    public boolean deleteRole(Long gid) {
+
+        //删除权限
+        boolean flag = menuMapper.deleteMenuRoleByRoleId(gid);
+        //删除角色
+        mapper.deleteByGid(gid);
+
+        return flag;
+    }
 }

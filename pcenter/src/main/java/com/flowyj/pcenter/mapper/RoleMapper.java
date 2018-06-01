@@ -37,4 +37,6 @@ public interface RoleMapper {
     @Options(useGeneratedKeys = true,keyProperty = "gid",keyColumn = "gid")
     void addRole(Role role);
 
+    @Delete("delete from role where gid = #{gid}")
+    void deleteByGid(@Param(value = "gid") Long gid);
 }

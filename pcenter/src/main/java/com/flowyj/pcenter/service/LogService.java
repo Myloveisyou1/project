@@ -53,7 +53,7 @@ public class LogService {
      * @param pageSize
      * @return
      */
-    public Map<String,Object> pagingQueryLogs(Integer pageNum,Integer pageSize) {
+    public Map<String,Object> pagingQueryLogs(Integer pageNum,Integer pageSize,String startTime,String endTime) {
 
         Integer start = 0,end = 0;
         Pages pages = new Pages();
@@ -72,8 +72,8 @@ public class LogService {
         end = pageSize;
 
 
-        List<Logs> list = logsMapper.pagingQueryLogs(start,end);
-        int count = logsMapper.pagingQueryLogsCount();
+        List<Logs> list = logsMapper.pagingQueryLogs(start,end,startTime,endTime);
+        int count = logsMapper.pagingQueryLogsCount(startTime,endTime);
 
         pages.setTotalPage((count%pageSize) > 0?((count/pageSize)+1):(count/pageSize));
         pages.setTotalCount(count);

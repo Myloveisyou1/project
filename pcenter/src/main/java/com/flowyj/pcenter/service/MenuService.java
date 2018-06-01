@@ -22,10 +22,10 @@ public class MenuService {
     @Autowired
     private MenuMapper mapper;
 
-    public List<MenuList> findAllMenu() {
+    public List<Menu> findAllMenu() {
 
         List<Menu> menuList = mapper.findAllMenu();
-        List<MenuList> backList = new ArrayList<>();
+        List<Menu> backList = new ArrayList<>();
         if (CommonUtil.isNotEmpty(menuList)) {
             if (menuList.size() > 0) {
 
