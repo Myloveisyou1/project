@@ -27,8 +27,10 @@ public class SimpleInsertLangDriver extends XMLLanguageDriver implements Languag
             sb.append("(");
 
             for (Field field : parameterType.getDeclaredFields()) {
-                sb.append(CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, field.getName()) + ",");
-                tmp.append("#{" + field.getName() + "},");
+                if (!field.isAnnotationPresent(Invisible.class)) {  // 排除被Invisble修饰的变量
+                    sb.append(CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, field.getName()) + ",");
+                    tmp.append("#{" + field.getName() + "},");
+                }
             }
 
             sb.deleteCharAt(sb.lastIndexOf(","));

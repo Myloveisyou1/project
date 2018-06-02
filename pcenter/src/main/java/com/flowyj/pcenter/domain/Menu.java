@@ -1,6 +1,8 @@
 package com.flowyj.pcenter.domain;
 
 import com.flowyj.pcenter.domain.common.Base;
+import com.flowyj.pcenter.utils.Invisible;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import lombok.Data;
 
 import java.util.List;
@@ -21,6 +23,18 @@ public class Menu extends Base{
     private Integer parentCode;
     private Integer code;
     private Long belong;
+
+    @Invisible
     private String projectName;
+
+    @Invisible
     private List<Menu> menuList;
+
+    public Long version;
+
+    public String createTime;
+
+    public String updateTime;
+
+    public Integer status;
 }

@@ -1,11 +1,13 @@
 package com.flowyj.pcenter.controller;
 
+import com.flowyj.pcenter.domain.Menu;
 import com.flowyj.pcenter.domain.common.Result;
 import com.flowyj.pcenter.service.MenuService;
 import com.flowyj.pcenter.utils.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -29,4 +31,45 @@ public class MenuController {
 
         return ResultUtil.success(service.findAllMenu(),null);
     }
+
+    /**
+     * 查询所有图标
+     * @return
+     */
+    @GetMapping(value = "/findIconList")
+    public Result findIconList() {
+
+        return ResultUtil.success(service.findIconList(),null);
+    }
+    /**
+     * 添加图标
+     * @return
+     */
+    @GetMapping(value = "/addIcon")
+    public Result addIcon(@RequestParam(value = "name") String name, @RequestParam(value = "url") String url) {
+
+        return ResultUtil.success(service.addIcon(name,url),null);
+    }
+
+    /**
+     * 添加菜单
+     * @return
+     */
+    @GetMapping(value = "/addMenu")
+    public Result addMenu(Menu menu) {
+
+        return ResultUtil.success(service.addMenu(menu),null);
+    }
+
+    /**
+     * 删除菜单
+     * @return
+     */
+    @GetMapping(value = "/delMenu")
+    public Result delMenu(Long gid) {
+
+        return ResultUtil.success(service.delMenu(gid),null);
+    }
+
+
 }

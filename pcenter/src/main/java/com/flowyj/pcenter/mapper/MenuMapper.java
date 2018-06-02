@@ -1,11 +1,11 @@
 package com.flowyj.pcenter.mapper;
 
+import com.flowyj.pcenter.domain.Icon;
 import com.flowyj.pcenter.domain.Menu;
 import com.flowyj.pcenter.domain.MenuRole;
 import com.flowyj.pcenter.utils.SimpleInsertLangDriver;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -51,4 +51,38 @@ public interface MenuMapper {
      */
     @Delete("delete from menu where belong = #{gid}")
     boolean deleteMenuByProject(@Param(value = "gid") Long gid);
+
+    /**
+     * 根据菜单删除权限关联表
+     * @param gid
+     * @return
+     */
+    @Delete("delete from menu_role where menu_id = #{gid}")
+    boolean deleteMenuRoleByMenuId(@Param(value = "gid") Long gid);
+
+    /**
+     * 根据菜单删除父类和子类
+     * @param gid
+     * @return
+     */
+    @Delete("delete from menu where gid = #{gid} or parent_code = #{code}")
+    boolean deleteMenuByMenuId(@Param(value = "gid") Long gid,@Param(value = "code") Integer code);
+
+    @Select("select gid,name,url,version,create_time createTime,update_time updateTime,status from icon")
+    List<Icon> findIconList();
+
+
+    @Insert("insert into icon (#{icon})")
+    @Lang(SimpleInsertLangDriver.class)
+    boolean addIcon(Icon icon);
+
+    @Insert("insert into menu (#{menu})")
+    @Lang(SimpleInsertLangDriver.class)
+    boolean addMenu(Menu menu);
+
+    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code from menu where gid = #{gid}")
+    Menu findById(Long gid);
+
+    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code from menu where parent_code = #{code}")
+    List<Menu> findMenuByParentCode(Integer code);
 }
