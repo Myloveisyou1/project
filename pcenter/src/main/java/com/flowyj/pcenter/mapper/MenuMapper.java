@@ -4,6 +4,7 @@ import com.flowyj.pcenter.domain.Icon;
 import com.flowyj.pcenter.domain.Menu;
 import com.flowyj.pcenter.domain.MenuRole;
 import com.flowyj.pcenter.utils.SimpleInsertLangDriver;
+import com.flowyj.pcenter.utils.SimpleUpdateLangDriver;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
@@ -80,9 +81,15 @@ public interface MenuMapper {
     @Lang(SimpleInsertLangDriver.class)
     boolean addMenu(Menu menu);
 
-    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code from menu where gid = #{gid}")
+    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code,version from menu where gid = #{gid}")
     Menu findById(Long gid);
 
-    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code from menu where parent_code = #{code}")
+    @Select("select m.gid,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
+            "from menu m inner join project p on m.belong=p.gid and m.parent_code = #{code} order by gid desc")
     List<Menu> findMenuByParentCode(Integer code);
+
+    @Update("update menu (#{saveBean}) where gid = #{gid}")
+    @Lang(SimpleUpdateLangDriver.class)
+    boolean updateMenu(Menu saveBean);
+
 }

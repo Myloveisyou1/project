@@ -8,6 +8,7 @@ package com.flowyj.pcenter.enums;
 public enum ResultEnum {
     UNKNOW_ERROR(-1,"系统繁忙,请稍后再试!"),
     EMPTY_ERROR(404,"参数不全"),
+    ERROR_PATH(404,"请求地址错误"),
     SUCCESS(200,"成功"),
     ERROR(201,"失败"),
     NOT_EXIST(202,"code不存在"),

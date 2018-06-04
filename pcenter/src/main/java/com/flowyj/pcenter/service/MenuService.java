@@ -2,7 +2,6 @@ package com.flowyj.pcenter.service;
 
 import com.flowyj.pcenter.domain.Icon;
 import com.flowyj.pcenter.domain.Menu;
-import com.flowyj.pcenter.domain.MenuRole;
 import com.flowyj.pcenter.mapper.MenuMapper;
 import com.flowyj.pcenter.utils.BaseUtils;
 import com.flowyj.pcenter.utils.CommonUtil;
@@ -79,6 +78,7 @@ public class MenuService {
     public boolean addMenu(Menu menu) {
 
         Menu bean = mapper.findAllMenu().get(0);
+
         if (CommonUtil.isNotEmpty(menu.getParentCode())) {
             //添加子菜单
             menu.setCode(bean.getCode()+1);
@@ -119,5 +119,60 @@ public class MenuService {
 
 
         return mapper.deleteMenuByMenuId(gid,menu.getCode());
+    }
+
+    /**
+     * 根据id查询菜单
+     * @param gid
+     * @return
+     */
+    public Menu findById(Long gid) {
+
+        return mapper.findById(gid);
+    }
+
+    /**
+     * 修改菜单
+     * @param menu
+     * @return
+     */
+    public boolean editMenu(Menu menu) {
+
+        Menu saveBean = findById(menu.getGid());
+        if (CommonUtil.isNotEmpty(saveBean)) {
+
+            if (CommonUtil.isNotEmpty(menu.getMenuName())) {
+                saveBean.setMenuName(menu.getMenuName());
+            }
+            if (CommonUtil.isNotEmpty(menu.getUrl())) {
+                saveBean.setUrl(menu.getUrl());
+            }
+            if (CommonUtil.isNotEmpty(menu.getIcon())) {
+                saveBean.setIcon(menu.getIcon());
+            }
+            if (CommonUtil.isNotEmpty(menu.getBelong())) {
+                saveBean.setBelong(menu.getBelong());
+            }
+
+            saveBean.setUpdateTime(DatesUtils.time());
+            saveBean.setVersion(saveBean.getVersion()+1);
+        }
+
+        return mapper.updateMenu(saveBean);
+    }
+
+    /**
+     * 查询子菜单
+     * @param parentCode
+     * @return
+     */
+    public List<Menu> findChildMenu(String parentCode) {
+
+        int code = 0;
+        if (CommonUtil.isNotEmpty(parentCode)) {
+            code = Integer.parseInt(parentCode);
+        }
+        List<Menu> list = mapper.findMenuByParentCode(code);
+        return list;
     }
 }

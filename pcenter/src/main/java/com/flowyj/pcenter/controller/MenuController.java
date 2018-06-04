@@ -71,5 +71,37 @@ public class MenuController {
         return ResultUtil.success(service.delMenu(gid),null);
     }
 
+    /**
+     * 根据id查询菜单信息
+     * @param gid
+     * @return
+     */
+    @GetMapping(value = "/findById")
+    public Result findById(@RequestParam(value = "id") Long gid) {
+
+        return ResultUtil.success(service.findById(gid),null);
+    }
+
+    /**
+     * 修改菜单
+     * @param menu
+     * @return
+     */
+    @GetMapping(value = "/editMenu")
+    public Result editMenu(Menu menu) {
+
+        return ResultUtil.success(service.editMenu(menu),null);
+    }
+
+    /**
+     * 查询子菜单
+     * @param parentCode
+     * @return
+     */
+    @GetMapping(value = "/findChildMenu")
+    public Result findChildMenu(@RequestParam(value = "parentCode") String parentCode) {
+
+        return ResultUtil.success(service.findChildMenu(parentCode),null);
+    }
 
 }

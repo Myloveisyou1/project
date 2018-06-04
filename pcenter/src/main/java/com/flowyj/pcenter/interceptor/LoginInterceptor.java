@@ -57,6 +57,11 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
 
+        if(httpServletResponse.getStatus()==500){
+            throw new PCenterException(ResultEnum.UNKNOW_ERROR);
+        }else if(httpServletResponse.getStatus()==404){
+            throw new PCenterException(ResultEnum.ERROR_PATH);
+        }
     }
 
     @Override

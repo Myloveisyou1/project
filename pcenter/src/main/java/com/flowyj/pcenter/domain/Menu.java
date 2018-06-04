@@ -13,7 +13,7 @@ import java.util.List;
  * @Date: create in 2018/5/25 0025 15:38
  */
 @Data
-public class Menu extends Base{
+public class Menu{
 
     private Long gid;
 
