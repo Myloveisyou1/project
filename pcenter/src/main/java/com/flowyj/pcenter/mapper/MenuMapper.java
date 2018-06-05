@@ -81,7 +81,7 @@ public interface MenuMapper {
     @Lang(SimpleInsertLangDriver.class)
     boolean addMenu(Menu menu);
 
-    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code,version from menu where gid = #{gid}")
+    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code,version,belong from menu where gid = #{gid}")
     Menu findById(Long gid);
 
     @Select("select m.gid,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +

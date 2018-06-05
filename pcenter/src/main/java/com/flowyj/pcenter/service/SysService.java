@@ -22,6 +22,7 @@ public class SysService {
     public boolean addVersion(SysVersion version) {
 
         version.setUpdateTime(DatesUtils.time());
+        version.setVersion("P_"+DatesUtils.getToday().replaceAll("-","")+"_"+version.getVersion());
 
         return mapper.addVersion(version);
 

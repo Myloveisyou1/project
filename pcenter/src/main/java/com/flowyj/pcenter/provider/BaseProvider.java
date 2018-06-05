@@ -1,5 +1,6 @@
 package com.flowyj.pcenter.provider;
 
+import com.flowyj.pcenter.domain.SalaryType;
 import com.flowyj.pcenter.utils.CommonUtil;
 
 /**
@@ -61,6 +62,29 @@ public class BaseProvider {
             sql.append(" AND end_time <= '"+endTime+" 23:59:59'");
         }
 
+        return sql.toString();
+    }
+
+
+    /**
+     * ====================================薪资扣费(消费)项配置=============================================================
+     */
+
+    public String findSalaryType(SalaryType salaryType) {
+
+        StringBuffer sql = new StringBuffer("select gid,s_type sType,s_name sName,s_deductions_type sDeductionsType," +
+                "s_deductions_value sDeductionsValue,s_operation_type sOperationType,version,create_time createTime,update_time updateTime,status from salary_type where 1=1");
+        if (CommonUtil.isNotEmpty(salaryType)) {
+            if (CommonUtil.isNotEmpty(salaryType.getSType())) {
+                sql.append(" and s_type = "+salaryType.getSType());
+            }
+            if (CommonUtil.isNotEmpty(salaryType.getSName())) {
+                sql.append(" and s_name like '%"+salaryType.getSName()+"%'");
+            }
+            if (CommonUtil.isNotEmpty(salaryType.getStatus())) {
+                sql.append(" and status = "+salaryType.getStatus());
+            }
+        }
         return sql.toString();
     }
 }
