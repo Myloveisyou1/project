@@ -1,6 +1,11 @@
 package com.flowyj.pcenter.provider;
 
+import com.flowyj.pcenter.PcenterApplication;
+import com.flowyj.pcenter.domain.Consume;
 import com.flowyj.pcenter.domain.SalaryType;
+import com.flowyj.pcenter.domain.common.Pages;
+import com.flowyj.pcenter.enums.ResultEnum;
+import com.flowyj.pcenter.exception.PCenterException;
 import com.flowyj.pcenter.utils.CommonUtil;
 
 /**
@@ -85,6 +90,60 @@ public class BaseProvider {
                 sql.append(" and status = "+salaryType.getStatus());
             }
         }
+        return sql.toString();
+    }
+
+    /**
+     * ====================================消费记录=============================================================
+     */
+    public String findConsume(Consume consume,Pages pages) {
+
+        StringBuffer sql = new StringBuffer("select gid,consume_type consumeType,consume_money consumeMoney,consume_remark consumeRemark," +
+                        "version,create_time createTime,update_time updateTime,status from consume where 1=1");
+        if (CommonUtil.isNotEmpty(consume)) {
+            if (CommonUtil.isNotEmpty(consume.getConsumeType())) {
+                if (consume.getConsumeType() != -1) {
+                    sql.append(" and consume_type = "+consume.getConsumeType());
+                }
+            }
+            if (CommonUtil.isNotEmpty(consume.getStart())) {
+                sql.append(" and create_time >= "+consume.getStart()+" 00:00:00");
+            }
+            if (CommonUtil.isNotEmpty(consume.getEnd())) {
+                sql.append(" and create_time <= "+consume.getEnd()+" 23:59:59");
+            }
+        }
+        sql.append(" order by consume_type,gid desc");
+
+        if (CommonUtil.isNotEmpty(pages)) {
+            if (CommonUtil.isNotEmpty(pages.getPageNumber()) && CommonUtil.isNotEmpty(pages.getPageSize())) {
+                sql.append(" limit "+(pages.getPageNumber()-1)*pages.getPageSize()+","+pages.getPageSize());
+            } else {
+                throw new PCenterException(ResultEnum.EMPTY_ERROR);
+            }
+        }
+
+        return sql.toString();
+    }
+
+    public String findConsumeCount(Consume consume) {
+
+        StringBuffer sql = new StringBuffer("select count(gid) from consume where 1=1");
+
+        if (CommonUtil.isNotEmpty(consume)) {
+            if (CommonUtil.isNotEmpty(consume.getConsumeType())) {
+                if (consume.getConsumeType() != -1) {
+                    sql.append(" and consume_type = "+consume.getConsumeType());
+                }
+            }
+            if (CommonUtil.isNotEmpty(consume.getStart())) {
+                sql.append(" and create_time >= "+consume.getStart()+" 00:00:00");
+            }
+            if (CommonUtil.isNotEmpty(consume.getEnd())) {
+                sql.append(" and create_time <= "+consume.getEnd()+" 23:59:59");
+            }
+        }
+
         return sql.toString();
     }
 }

@@ -2,6 +2,7 @@ package com.flowyj.pcenter.utils;
 
 import com.flowyj.pcenter.domain.Menu;
 import com.flowyj.pcenter.domain.MenuList;
+import com.flowyj.pcenter.domain.common.Pages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,5 +85,37 @@ public class BaseUtils {
 
         return backList;
 
+    }
+
+
+    /**
+     * 分页参数处理
+     * @param pageNumber
+     * @param pageSize
+     * @return
+     */
+    public static Pages pages(Integer pageNumber,Integer pageSize) {
+
+        Pages pages = new Pages();
+        pages.setPageNumber(pageNumber);
+        pages.setPageSize(pageSize);
+
+        return pages;
+    }
+
+    /**
+     * 处理分页结果
+     * @return
+     */
+    public static Pages pagesResult(Pages pages,int count) {
+
+        pages.setTotalCount(count);
+        if (pages.getPageNumber() == 1) {
+            pages.setFirst(true);
+            pages.setLast(false);
+        }
+        pages.setTotalPage((count%pages.getPageSize())>0?(count/pages.getPageSize()+1):(count/pages.getPageSize()));
+
+        return pages;
     }
 }

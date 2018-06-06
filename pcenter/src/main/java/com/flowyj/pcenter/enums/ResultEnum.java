@@ -7,6 +7,11 @@ package com.flowyj.pcenter.enums;
  */
 public enum ResultEnum {
     UNKNOW_ERROR(-1,"系统繁忙,请稍后再试!"),
+    RESTAURANT(1,"餐饮"),
+    COMMUNICATION(2,"通讯"),
+    TRAFFIC(3,"交通"),
+    ENTERTAINMENT(4,"娱乐"),
+    LIFE_USE(5,"生活用品"),
     EMPTY_ERROR(404,"参数不全"),
     ERROR_PATH(404,"请求地址错误"),
     SUCCESS(200,"成功"),
@@ -36,6 +41,14 @@ public enum ResultEnum {
         this.msg = msg;
     }
 
+    public static String getMsgByCode(Integer code) {
+        for(ResultEnum responseEnum : ResultEnum.values()) {
+            if(responseEnum.getCode().equals(code)){
+                return responseEnum.msg;
+            }
+        }
+        return null;
+    }
     public Integer getCode() {
         return code;
     }
