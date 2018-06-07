@@ -32,6 +32,12 @@ public class ConsumeService {
     public Map<String,Object> findConsume(Consume consume, Integer pageNumber, Integer pageSize) {
 
         Map<String,Object> map = new HashMap<>();
+        if (pageNumber < 1) {
+            pageNumber = 1;
+        }
+        if (pageSize < 1) {
+            pageNumber = 10;
+        }
         Pages pages = BaseUtils.pages(pageNumber,pageSize);
 
         List<Consume> list = mapper.findConsume(consume, pages);

@@ -1,10 +1,7 @@
 package com.flowyj.pcenter.service;
 
 import com.alibaba.fastjson.JSONObject;
-import com.flowyj.pcenter.domain.Menu;
-import com.flowyj.pcenter.domain.MenuList;
-import com.flowyj.pcenter.domain.Role;
-import com.flowyj.pcenter.domain.User;
+import com.flowyj.pcenter.domain.*;
 import com.flowyj.pcenter.enums.ResultEnum;
 import com.flowyj.pcenter.exception.PCenterException;
 import com.flowyj.pcenter.mapper.MenuMapper;
@@ -78,13 +75,6 @@ public class LoginService {
                             throw new PCenterException(ResultEnum.ROLE_DISABLED);
                         }
                     }
-                    List<Menu> menuList = menuMapper.findMenuByRole(roleId);
-                    //最终返回的权限
-                    List<MenuList> backList = new ArrayList<>();
-                    if (menuList != null && menuList.size() > 0) {
-                        backList = BaseUtils.getMenuListForLogin(menuList);
-                    }
-                    map.put("menu",backList);
                     //修改登录时间
                     user.setLoginTime(DatesUtils.time());
                     mapper.optUpdateUser(user);
@@ -137,21 +127,39 @@ public class LoginService {
      * @param sessionId
      * @return
      */
-    public boolean checkPermission(String sessionId) {
+    public boolean checkPermission(String sessionId,String url) {
 
         boolean flag = stringRedisTemplate.hasKey(sessionId);
         if(flag){
             //重新设置session有效期
-            String str = stringRedisTemplate.opsForValue().get(sessionId);
-            JSONObject jsonObject = JSONObject.parseObject(str);
-            if (jsonObject.get("roleName").equals("超级管理员") || jsonObject.get("roleId").equals("1")) {
+            String user = stringRedisTemplate.opsForValue().get(sessionId);
+            JSONObject jsonObject = JSONObject.parseObject(user);
+            /*if (jsonObject.get("roleName").equals("超级管理员") || jsonObject.get("roleId").equals("1")) {
                 flag = true;
             } else {
                 flag = false;
+            }*/
+
+            System.out.println(url);//http://localhost:8081/consume/findConsume
+            //检验权限
+            String[] str = url.split("/");
+            String checkUrl = str[str.length-2]+"/"+str[str.length-1];
+            System.out.println(checkUrl);
+
+            //先判断权限存在不.然后判断是否拥有权限
+            Menu menu = menuMapper.findMenuByUrl(checkUrl);
+            if (CommonUtil.isNotEmpty(menu)) {
+                MenuRole menuRole = menuMapper.findInfoByRoleAndMenu(Long.parseLong(jsonObject.get("roleId").toString()),menu.getGid());
+                if (CommonUtil.isNotEmpty(menuRole)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
             }
         }else{
             throw new PCenterException(ResultEnum.NOT_LOGIN);
         }
-        return flag;
     }
 }

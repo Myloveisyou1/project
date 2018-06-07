@@ -154,6 +154,8 @@ public class RoleService {
                                 }
                             }
                         }
+                    } else {
+                        flag = true;
                     }
                     if (flag) {
                         MenuRole menuRole = new MenuRole();

@@ -63,7 +63,7 @@ public class SalaryController {
         return ResultUtil.success(service.delSalaryType(gid),null);
     }
     /**
-     * 删除工资消费类型
+     * 查询工资消费类型
      * @param gid
      * @return
      */

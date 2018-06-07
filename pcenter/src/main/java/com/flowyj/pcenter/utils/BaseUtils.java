@@ -33,7 +33,7 @@ public class BaseUtils {
                     if (mj.getParentCode() != 0) {
                         if (mi.getCode() == mj.getParentCode()) {
                             beanj.setGid(mj.getGid());
-                            beanj.setMenuName(mj.getMenuName());
+                            beanj.setMenuName(mj.getMenuName()+";"+mj.getMenuType());
                             beanj.setIcon(mj.getIcon());
                             beanj.setUrl(mj.getUrl());
                             list.add(beanj);

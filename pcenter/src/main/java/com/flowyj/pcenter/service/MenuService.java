@@ -2,6 +2,9 @@ package com.flowyj.pcenter.service;
 
 import com.flowyj.pcenter.domain.Icon;
 import com.flowyj.pcenter.domain.Menu;
+import com.flowyj.pcenter.domain.MenuList;
+import com.flowyj.pcenter.enums.ResultEnum;
+import com.flowyj.pcenter.exception.PCenterException;
 import com.flowyj.pcenter.mapper.MenuMapper;
 import com.flowyj.pcenter.utils.BaseUtils;
 import com.flowyj.pcenter.utils.CommonUtil;
@@ -10,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.management.MemoryUsage;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,13 +81,17 @@ public class MenuService {
      */
     public boolean addMenu(Menu menu) {
 
+        //校验是否重复
+        Menu list = mapper.findMenuByUrl(menu.getUrl());
+        if (CommonUtil.isNotEmpty(list)) {
+            throw new PCenterException(ResultEnum.SAME_DATA);
+        }
         Menu bean = mapper.findAllMenu().get(0);
 
         if (CommonUtil.isNotEmpty(menu.getParentCode())) {
             //添加子菜单
             menu.setCode(bean.getCode()+1);
         } else {
-            menu.setParentCode(0);
             menu.setCode(bean.getCode()+1);
         }
         menu.setStatus(0);
@@ -174,5 +182,21 @@ public class MenuService {
         }
         List<Menu> list = mapper.findMenuByParentCode(code);
         return list;
+    }
+
+    /**
+     * 查询角色的权限
+     * @param roleId
+     * @return
+     */
+    public List<MenuList> findMenuByRole(Long roleId) {
+
+        List<Menu> menuList = mapper.findMenuByRole(roleId);
+        //最终返回的权限
+        List<MenuList> backList = new ArrayList<>();
+        if (menuList != null && menuList.size() > 0) {
+            backList = BaseUtils.getMenuListForLogin(menuList);
+        }
+        return backList;
     }
 }

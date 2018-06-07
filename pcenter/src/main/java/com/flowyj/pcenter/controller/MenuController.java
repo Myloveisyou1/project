@@ -104,4 +104,14 @@ public class MenuController {
         return ResultUtil.success(service.findChildMenu(parentCode),null);
     }
 
+    /**
+     * 查询角色的权限
+     * @return
+     */
+    @GetMapping(value = "/findMenuByRole")
+    public Result findMenuByRole(Long roleId) {
+
+        return ResultUtil.success(service.findMenuByRole(roleId),null);
+    }
+
 }

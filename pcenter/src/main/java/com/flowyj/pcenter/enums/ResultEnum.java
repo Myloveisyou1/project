@@ -31,7 +31,8 @@ public enum ResultEnum {
     SAME_USER(214,"账户已存在"),
     ROLE_DISABLED(215,"角色被禁用"),
     SAME_ROLE(216,"角色已存在"),
-    NO_PERMISSION(217,"暂无此权限" );
+    NO_PERMISSION(217,"暂无此权限,请联系管理员" ),
+    SAME_DATA(218,"数据已存在" );
     private Integer code;
 
     private String msg;

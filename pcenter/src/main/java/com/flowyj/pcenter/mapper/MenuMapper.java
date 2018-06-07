@@ -19,15 +19,27 @@ import java.util.List;
 @Mapper
 public interface MenuMapper {
 
-
-    @Select("select m.gid,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
+    /**
+     * 查询角色的菜单/权限
+     * @param roleId
+     * @return
+     */
+    @Select("select m.gid,m.menu_type menuType,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
             "from menu m inner join menu_role r on m.gid=r.menu_id inner JOIN project p on m.belong=p.gid and m.status=0 and r.role_id = #{roleId} order by m.gid")
     List<Menu> findMenuByRole(Long roleId);
 
-    @Select("select m.gid,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
+    /**
+     * 查询所有的菜单/权限
+     * @return
+     */
+    @Select("select m.gid,m.menu_type menuType,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
             "from menu m left join project p on m.belong=p.gid order by gid desc")
     List<Menu> findAllMenu();
 
+    /**
+     * 增加菜单/权限
+     * @param menuRole
+     */
     @Insert("insert into menu_role (#{menuRole})")
     @Lang(SimpleInsertLangDriver.class)
     @Options(useGeneratedKeys = true,keyProperty = "gid",keyColumn = "gid")
@@ -81,15 +93,23 @@ public interface MenuMapper {
     @Lang(SimpleInsertLangDriver.class)
     boolean addMenu(Menu menu);
 
-    @Select("select gid,icon,menu_name menuName,url,parent_code parentCode,code,version,belong from menu where gid = #{gid}")
+    @Select("select gid,menu_type menuType,icon,menu_name menuName,url,parent_code parentCode,code,version,belong from menu where gid = #{gid}")
     Menu findById(Long gid);
 
-    @Select("select m.gid,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
+    @Select("select m.gid,m.menu_type menuType,m.icon,m.menu_name menuName,m.url,m.parent_code parentCode,m.`code`,m.belong,m.version,m.create_time createTime,m.update_time updateTime,m.`status`,p.project_name projectName " +
             "from menu m inner join project p on m.belong=p.gid and m.parent_code = #{code} order by gid desc")
     List<Menu> findMenuByParentCode(Integer code);
 
     @Update("update menu (#{saveBean}) where gid = #{gid}")
     @Lang(SimpleUpdateLangDriver.class)
     boolean updateMenu(Menu saveBean);
+
+    /**
+     * 根据url查询菜单
+     * @param checkUrl
+     * @return
+     */
+    @Select("select gid,menu_type menuType,icon,menu_name menuName,url,parent_code parentCode,code,version,belong from menu where url=#{url}")
+    Menu findMenuByUrl(@Param(value = "url") String checkUrl);
 
 }

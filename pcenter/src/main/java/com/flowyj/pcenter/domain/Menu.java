@@ -1,8 +1,6 @@
 package com.flowyj.pcenter.domain;
 
-import com.flowyj.pcenter.domain.common.Base;
 import com.flowyj.pcenter.utils.Invisible;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import lombok.Data;
 
 import java.util.List;
@@ -17,6 +15,7 @@ public class Menu{
 
     private Long gid;
 
+    private Integer menuType;
     private String icon;
     private String menuName;
     private String url;
